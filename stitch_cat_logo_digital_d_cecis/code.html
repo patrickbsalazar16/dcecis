@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>D'Cecis - Catálogo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Lexend:wght@500&amp;family=Plus+Jakarta+Sans:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#edeeef",
+                    "secondary": "#34647b",
+                    "outline": "#837375",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-variant": "#e1e3e4",
+                    "on-surface-variant": "#514345",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#9dcde7",
+                    "primary-container": "#ffc1cc",
+                    "outline-variant": "#d5c2c4",
+                    "on-secondary-fixed-variant": "#174c62",
+                    "surface": "#f8f9fa",
+                    "secondary-fixed": "#c1e8ff",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#ffd9df",
+                    "on-tertiary-fixed": "#012114",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#d9dadb",
+                    "secondary-container": "#b4e4ff",
+                    "inverse-primary": "#f3b7c1",
+                    "on-tertiary-container": "#40604f",
+                    "surface-container-high": "#e7e8e9",
+                    "on-tertiary-fixed-variant": "#2e4d3d",
+                    "inverse-surface": "#2e3132",
+                    "background": "#f8f9fa",
+                    "on-surface": "#191c1d",
+                    "surface-tint": "#81515b",
+                    "tertiary-container": "#b6d9c4",
+                    "tertiary-fixed": "#c7ebd5",
+                    "on-secondary-container": "#36667e",
+                    "primary": "#81515b",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#7b4c56",
+                    "tertiary": "#456554",
+                    "primary-fixed-dim": "#f3b7c1",
+                    "on-primary-fixed": "#331019",
+                    "on-background": "#191c1d",
+                    "on-secondary-fixed": "#001e2b",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#accfba",
+                    "on-primary-fixed-variant": "#663a43",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-bright": "#f8f9fa"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "16px",
+                    "unit": "4px",
+                    "stack-lg": "32px",
+                    "stack-sm": "8px",
+                    "gutter": "24px",
+                    "margin": "32px"
+            },
+            "fontFamily": {
+                    "body-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label-sm": [
+                            "Lexend"
+                    ],
+                    "body-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-md": [
+                            "Epilogue"
+                    ],
+                    "headline-lg": [
+                            "Epilogue"
+                    ]
+            },
+            "fontSize": {
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "28px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-8 h-16 sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 shadow-sm dark:shadow-none">
+<div class="flex items-center gap-gutter">
+<span class="text-2xl font-black text-pink-400 dark:text-pink-300 tracking-tight font-['Epilogue']">D'Cecis</span>
+<nav class="hidden md:flex gap-stack-md">
+<a class="font-['Epilogue'] font-medium text-sm text-pink-500 dark:text-pink-200 border-b-2 border-pink-400 pb-1 font-bold hover:bg-pink-50 dark:hover:bg-pink-900/20 transition-colors Active: scale-95 duration-150" href="#">Papelería</a>
+<a class="font-['Epilogue'] font-medium text-sm text-slate-500 dark:text-slate-400 hover:text-pink-400 hover:bg-pink-50 dark:hover:bg-pink-900/20 transition-colors Active: scale-95 duration-150 flex items-center gap-1" href="#">Ropa <span class="material-symbols-outlined text-[16px]">open_in_new</span></a>
+<a class="font-['Epilogue'] font-medium text-sm text-slate-500 dark:text-slate-400 hover:text-pink-400 hover:bg-pink-50 dark:hover:bg-pink-900/20 transition-colors Active: scale-95 duration-150" href="#">Otros</a>
+</nav>
+</div>
+<div class="flex items-center gap-stack-md">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="bg-surface-container border-2 border-transparent focus:border-primary-container rounded-full pl-10 pr-4 py-2 text-sm focus:outline-none focus:ring-0 transition-colors w-64 text-on-surface placeholder:text-outline-variant" placeholder="Buscar..." type="text"/>
+</div>
+<button class="text-pink-400 dark:text-pink-300 hover:bg-pink-50 dark:hover:bg-pink-900/20 transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-pink-400 dark:text-pink-300 hover:bg-pink-50 dark:hover:bg-pink-900/20 transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar as Filter Sidebar for this context -->
+<aside class="hidden md:flex flex-col p-4 gap-stack-lg h-[calc(100vh-64px)] w-64 border-r rounded-none bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 overflow-y-auto shrink-0 sticky top-16">
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant mb-stack-sm uppercase tracking-wider">Filtrar por Categoría</h3>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 p-2 bg-white dark:bg-slate-900 text-pink-500 dark:text-pink-300 font-bold rounded-lg shadow-sm opacity-80 font-['Epilogue'] text-sm" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+                        Catálogo
+                    </a>
+<a class="flex items-center gap-3 p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg hover:translate-x-1 transition-transform duration-200 font-['Epilogue'] text-sm" href="#">
+<span class="material-symbols-outlined">edit</span>
+                        Escritura
+                    </a>
+<a class="flex items-center gap-3 p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg hover:translate-x-1 transition-transform duration-200 font-['Epilogue'] text-sm" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+                        Papelería
+                    </a>
+<a class="flex items-center gap-3 p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg hover:translate-x-1 transition-transform duration-200 font-['Epilogue'] text-sm" href="#">
+<span class="material-symbols-outlined">palette</span>
+                        Arte
+                    </a>
+</nav>
+</div>
+<hr class="border-outline-variant/30"/>
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant mb-stack-md uppercase tracking-wider">Filtrar por Precio</h3>
+<div class="px-2">
+<input class="w-full accent-primary-container h-1 bg-surface-variant rounded-full appearance-none cursor-pointer" max="10000" min="0" type="range"/>
+<div class="flex justify-between text-xs text-outline mt-2 font-label-sm">
+<span>$0</span>
+<span>$10.000+</span>
+</div>
+</div>
+</div>
+<hr class="border-outline-variant/30"/>
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant mb-stack-md uppercase tracking-wider">Filtrar por Marca</h3>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded text-primary focus:ring-primary-container border-outline-variant w-4 h-4" type="checkbox"/>
+<span class="text-sm text-on-surface group-hover:text-primary transition-colors">Faber-Castell</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary-container border-outline-variant w-4 h-4" type="checkbox"/>
+<span class="text-sm text-on-surface group-hover:text-primary transition-colors">Bic</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary-container border-outline-variant w-4 h-4" type="checkbox"/>
+<span class="text-sm text-on-surface group-hover:text-primary transition-colors">Maped</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary-container border-outline-variant w-4 h-4" type="checkbox"/>
+<span class="text-sm text-on-surface group-hover:text-primary transition-colors">Pilot</span>
+</label>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto p-margin bg-background">
+<div class="flex justify-between items-end mb-stack-lg">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-unit">Catálogo Interno</h1>
+<p class="text-on-surface-variant">Consulta rápida de precios - Papelería</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-4 py-2 rounded-full hover:bg-primary-fixed transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add</span> Nuevo Ítem
+                    </button>
+</div>
+</div>
+<!-- Bento Grid / Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-white rounded-xl overflow-hidden border border-surface-variant/50 hover:shadow-md transition-shadow duration-300 group flex flex-col relative">
+<div class="absolute top-2 left-2 z-10 bg-tertiary-container/80 backdrop-blur-sm text-on-tertiary-container font-label-sm text-[10px] px-2 py-1 rounded-sm uppercase border border-tertiary-fixed-dim/50 shadow-sm rotate-[-2deg]">
+                        En Stock
+                    </div>
+<div class="bg-primary-container/30 h-48 p-4 flex items-center justify-center relative overflow-hidden">
+<img alt="Cuaderno Espiral Pastel" class="object-contain h-full w-full group-hover:scale-105 transition-transform duration-300 mix-blend-multiply" data-alt="Soft pastel pink spiral notebook lying flat on a clean white surface with natural soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrIBOQkzCKMuEE-UMiUVIDwgxNuL3mmUmgafrAlJI9NF3zIXHPSBDMuiWwgXjoXjcqd4zHn8ozVdDMchivt0PZGHB9VSfnqnpHyiehDuQLSHW3_nWt8lpajJCoFrGHMbLlH_JfvydHhjjzjBaLH5Syde2lrCUTnriC-rOdge7KyVoc4NTBJ9qKsyICg0uXfT9FMSZh_dihZZl8t0rkd2CKBNyGqo3IXqJJNEFiNWpLoElhkwy4xcpAfKwhc7KyuspAdepL6d9CuQuU"/>
+</div>
+<div class="p-4 flex flex-col flex-1 bg-surface-container-lowest">
+<p class="text-xs text-outline mb-1 font-label-sm">Cuadernos</p>
+<h3 class="font-label-sm text-base text-on-surface mb-2 leading-tight flex-1">Cuaderno Espiral Pastel A5</h3>
+<div class="flex justify-between items-end mt-stack-md">
+<span class="font-headline-md text-xl text-primary">$1.500</span>
+<span class="text-xs text-outline-variant font-mono">SKU: CC-01</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white rounded-xl overflow-hidden border border-surface-variant/50 hover:shadow-md transition-shadow duration-300 group flex flex-col relative">
+<div class="bg-secondary-container/30 h-48 p-4 flex items-center justify-center relative overflow-hidden">
+<img alt="Set de Marcadores" class="object-contain h-full w-full group-hover:scale-105 transition-transform duration-300 mix-blend-multiply" data-alt="Collection of colorful markers arranged neatly on a light blue background, bright cheerful lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB31BzrMTXLq2rYOOWArv2qPMtwsDWacxtoc83nnZB1b_xErBwqv_GWpxPQz8DAT_VBwZv7tjZTLpjeo_R4Vhtrnx2-7j8h1hCVjHAU8lW0ZT-bmn1RQylFy3Wjpm8y7p6x0IBvBy2LXptHjqKv8cR9xdl51CPqKKITznIxH9HI5Pcrn8j9-I2FqnwkU9NbZ8CmmlOjulLAtarGgrekJT2Oys2rD-Wb3dj3xZpeTOyIvarzVnxQKART0lHKnSy_kUQvPQ5xVR4GAUzG"/>
+</div>
+<div class="p-4 flex flex-col flex-1 bg-surface-container-lowest">
+<p class="text-xs text-outline mb-1 font-label-sm">Escritura</p>
+<h3 class="font-label-sm text-base text-on-surface mb-2 leading-tight flex-1">Set de Marcadores Punta Fina (12u)</h3>
+<div class="flex justify-between items-end mt-stack-md">
+<span class="font-headline-md text-xl text-primary">$4.200</span>
+<span class="text-xs text-outline-variant font-mono">SKU: MA-12</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white rounded-xl overflow-hidden border border-surface-variant/50 hover:shadow-md transition-shadow duration-300 group flex flex-col relative">
+<div class="absolute top-2 left-2 z-10 bg-error-container/80 backdrop-blur-sm text-on-error-container font-label-sm text-[10px] px-2 py-1 rounded-sm uppercase border border-error-container/50 shadow-sm rotate-[1deg]">
+                        Poco Stock
+                    </div>
+<div class="bg-tertiary-container/30 h-48 p-4 flex items-center justify-center relative overflow-hidden">
+<img alt="Washi Tape" class="object-contain h-full w-full group-hover:scale-105 transition-transform duration-300 mix-blend-multiply" data-alt="Rolls of decorative washi tape with pastel geometric patterns stacked on a soft mint green background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC576YICJ8avd0KOp5WGATg3Acg1NrMmJ80pUzpN99i2PGC8taPr0XLYsLnzi2P_fN_dzz_MhH1c2VgDLu4UcWIo8Eqk6H-87Xw-Rnn4v8USN3KSgINWUiBC-UOLPKriyoq6ZZYEKNeeNGYsTtbeL3R5sfqAYU9bM0gKPY6u_evTgLmyGlYa4kBitZc6Owfqh9OhFIMuaHeumpb7QVpMNKJo4yGhl-BgAlwE-YMRak3aMrvsEtP3tRMO4_SSA6-kQCgw9YCq4kE2xXK"/>
+</div>
+<div class="p-4 flex flex-col flex-1 bg-surface-container-lowest">
+<p class="text-xs text-outline mb-1 font-label-sm">Decoración</p>
+<h3 class="font-label-sm text-base text-on-surface mb-2 leading-tight flex-1">Pack Washi Tape Geométrico (3u)</h3>
+<div class="flex justify-between items-end mt-stack-md">
+<span class="font-headline-md text-xl text-primary">$2.100</span>
+<span class="text-xs text-outline-variant font-mono">SKU: WT-03</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white rounded-xl overflow-hidden border border-surface-variant/50 hover:shadow-md transition-shadow duration-300 group flex flex-col relative">
+<div class="bg-surface-variant/30 h-48 p-4 flex items-center justify-center relative overflow-hidden">
+<img alt="Lápices de Colores" class="object-contain h-full w-full group-hover:scale-105 transition-transform duration-300 mix-blend-multiply" data-alt="Set of wooden colored pencils fanned out on a light grey background with soft diffused lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt0exVzE5A9ZOaIu6KZXWaQn0TasCb9ALo7zx6spsRre8luIlf1VpcLtvtI4xnd4O0xTvP8TN5La8oMtFaKdp_Rp3JPUZXWPKCu25Fua-SShKJPTwUoc5AJdz-59sEg9azS-aMJrVevI2KrKtOyaHz8k3xOCSO5hnChznXV51qPl6L8Cz-LmbVE8XF7Xbzdj6T8_xbW28rxVPY4_xdP1-xSPSdd8fxJeTgY988ENRwykNGRspDAKyQ8axT_Ccqi-ucnS4AiZrj9iqk"/>
+</div>
+<div class="p-4 flex flex-col flex-1 bg-surface-container-lowest">
+<p class="text-xs text-outline mb-1 font-label-sm">Arte</p>
+<h3 class="font-label-sm text-base text-on-surface mb-2 leading-tight flex-1">Lápices de Colores Acuarelables (24u)</h3>
+<div class="flex justify-between items-end mt-stack-md">
+<span class="font-headline-md text-xl text-primary">$8.500</span>
+<span class="text-xs text-outline-variant font-mono">SKU: LC-24</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="flex justify-between items-center py-6 px-8 w-full mt-auto bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+<span class="font-['Epilogue'] text-xs text-slate-400">© 2024 D'Cecis Catálogo Interno. Todos los derechos reservados.</span>
+<div class="flex gap-4">
+<a class="font-['Epilogue'] text-xs text-slate-400 hover:text-slate-600 hover:underline" href="#">Ayuda</a>
+<a class="font-['Epilogue'] text-xs text-slate-400 hover:text-slate-600 hover:underline" href="#">Privacidad</a>
+<a class="font-['Epilogue'] text-xs text-slate-400 hover:text-slate-600 hover:underline" href="#">Soporte Técnico</a>
+</div>
+</footer>
+</body></html>

@@ -1,4 +1,6 @@
-# Reference files (not needed for the website)
+# Archivos de referencia de diseño (no forman parte de la web)
 Imagen_referencial.jpg
 Imagen_referencial_2.png
-stitch_cat_logo_digital_d_cecis/
+
+# Carpeta interna de Claude
+.claude/

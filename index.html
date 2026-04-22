@@ -15,59 +15,52 @@
             theme: {
                 extend: {
                     colors: {
-                        primary:                  '#81515b',
-                        'on-primary':             '#ffffff',
-                        'primary-container':      '#ffc1cc',
-                        'on-primary-container':   '#7b4c56',
-                        'primary-fixed':          '#ffd9df',
-                        'primary-fixed-dim':      '#f3b7c1',
-                        secondary:                '#34647b',
-                        'on-secondary':           '#ffffff',
-                        'secondary-container':    '#b4e4ff',
-                        'on-secondary-container': '#36667e',
-                        tertiary:                 '#456554',
-                        'on-tertiary':            '#ffffff',
-                        'tertiary-container':     '#b6d9c4',
-                        'on-tertiary-container':  '#40604f',
-                        'tertiary-fixed':         '#c7ebd5',
-                        'tertiary-fixed-dim':     '#accfba',
-                        error:                    '#ba1a1a',
-                        'on-error':               '#ffffff',
-                        'error-container':        '#ffdad6',
-                        'on-error-container':     '#93000a',
-                        background:               '#f8f9fa',
-                        'on-background':          '#191c1d',
-                        surface:                  '#f8f9fa',
-                        'on-surface':             '#191c1d',
-                        'surface-variant':        '#e1e3e4',
-                        'on-surface-variant':     '#514345',
+                        primary:                    '#81515b',
+                        'on-primary':               '#ffffff',
+                        'primary-container':        '#ffc1cc',
+                        'on-primary-container':     '#7b4c56',
+                        'primary-fixed':            '#ffd9df',
+                        'primary-fixed-dim':        '#f3b7c1',
+                        secondary:                  '#34647b',
+                        'on-secondary':             '#ffffff',
+                        'secondary-container':      '#b4e4ff',
+                        'on-secondary-container':   '#36667e',
+                        tertiary:                   '#456554',
+                        'on-tertiary':              '#ffffff',
+                        'tertiary-container':       '#b6d9c4',
+                        'on-tertiary-container':    '#40604f',
+                        'tertiary-fixed':           '#c7ebd5',
+                        'tertiary-fixed-dim':       '#accfba',
+                        error:                      '#ba1a1a',
+                        'on-error':                 '#ffffff',
+                        'error-container':          '#ffdad6',
+                        'on-error-container':       '#93000a',
+                        background:                 '#f8f9fa',
+                        'on-background':            '#191c1d',
+                        surface:                    '#f8f9fa',
+                        'on-surface':               '#191c1d',
+                        'surface-variant':          '#e1e3e4',
+                        'on-surface-variant':       '#514345',
                         'surface-container-lowest': '#ffffff',
-                        'surface-container-low':  '#f3f4f5',
-                        'surface-container':      '#edeeef',
-                        'surface-container-high': '#e7e8e9',
+                        'surface-container-low':    '#f3f4f5',
+                        'surface-container':        '#edeeef',
+                        'surface-container-high':   '#e7e8e9',
                         'surface-container-highest':'#e1e3e4',
-                        outline:                  '#837375',
-                        'outline-variant':        '#d5c2c4',
-                    },
-                    borderRadius: {
-                        sm:      '0.25rem',
-                        DEFAULT: '0.5rem',
-                        md:      '0.75rem',
-                        lg:      '1rem',
-                        xl:      '1.5rem',
-                        full:    '9999px',
+                        outline:                    '#837375',
+                        'outline-variant':          '#d5c2c4',
+                        'inverse-surface':          '#2e3132',
+                        'inverse-on-surface':       '#f0f1f2',
                     },
                 }
             }
         }
     </script>
 
-    <!-- Safelist for dynamic Tailwind classes -->
-    <div class="hidden bg-pink-100 bg-blue-100 bg-violet-100 bg-amber-100 bg-green-100 bg-orange-100 bg-slate-100 bg-rose-100 bg-teal-100 bg-cyan-100"></div>
+    <!-- Safelist para clases dinámicas de Tailwind -->
+    <div class="hidden bg-pink-100 bg-blue-100 bg-violet-100 bg-amber-100 bg-green-100 bg-orange-100 bg-slate-100 bg-rose-100 bg-teal-100 bg-cyan-100 bg-lime-100 bg-indigo-100"></div>
 
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-
         .font-headline { font-family: 'Epilogue', sans-serif; }
         .font-label    { font-family: 'Lexend', sans-serif; }
 
@@ -76,32 +69,22 @@
             vertical-align: middle;
         }
 
-        /* Range input */
         input[type="range"] { -webkit-appearance: none; appearance: none; background: transparent; cursor: pointer; }
         input[type="range"]::-webkit-slider-runnable-track { background: #ffc1cc; height: 6px; border-radius: 9999px; }
         input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; margin-top: -5px; background-color: #81515b; height: 16px; width: 16px; border-radius: 9999px; }
         input[type="range"]::-moz-range-track { background: #ffc1cc; height: 6px; border-radius: 9999px; }
-        input[type="range"]::-moz-range-thumb { background-color: #81515b; height: 16px; width: 16px; border-radius: 9999px; border: none; }
+        input[type="range"]::-moz-range-thumb { background: #81515b; height: 16px; width: 16px; border-radius: 9999px; border: none; }
 
-        /* Scrollbar */
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #d5c2c4; border-radius: 9999px; }
         ::-webkit-scrollbar-thumb:hover { background: #837375; }
 
-        /* Card lift on hover */
         .product-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
         .product-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(129,81,91,0.13); }
 
-        /* Category link active state */
         .cat-link { transition: all 0.15s ease; }
         .cat-link.active { background: white; color: #81515b; font-weight: 700; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-
-        /* Modal animation */
-        #modal-backdrop { transition: opacity 0.15s ease; }
-
-        /* Toast */
-        #toast { transition: all 0.3s ease; }
     </style>
 </head>
 <body class="bg-background text-on-surface min-h-screen flex flex-col">
@@ -109,10 +92,7 @@
 <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
 <header class="flex justify-between items-center w-full px-8 h-16 sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
     <div class="flex items-center gap-8">
-        <!-- Logo -->
         <span class="text-2xl font-black text-primary tracking-tight font-headline select-none">D'Cecis</span>
-
-        <!-- Nav tabs -->
         <nav class="hidden md:flex gap-1">
             <a id="nav-papeleria" href="#" onclick="switchSection('papeleria'); return false;"
                class="nav-tab font-headline font-bold text-sm text-primary border-b-2 border-primary px-3 py-2 rounded-t-lg transition-colors">
@@ -129,9 +109,7 @@
             </a>
         </nav>
     </div>
-
     <div class="flex items-center gap-3">
-        <!-- Search bar -->
         <div class="relative hidden sm:block">
             <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" style="font-size:20px">search</span>
             <input id="search-input" type="text" placeholder="Buscar producto o marca..."
@@ -150,18 +128,13 @@
 <!-- ═══════════════════════ LAYOUT ═══════════════════════ -->
 <div class="flex flex-1 min-h-0">
 
-    <!-- ── SIDEBAR ── -->
+    <!-- SIDEBAR -->
     <aside class="hidden md:flex flex-col p-4 gap-6 h-[calc(100vh-64px)] w-64 border-r bg-slate-50 border-slate-200 overflow-y-auto shrink-0 sticky top-16">
-
-        <!-- Category filter -->
         <div>
             <h3 class="font-label text-xs font-medium text-on-surface-variant mb-3 uppercase tracking-wider">Filtrar por Categoría</h3>
             <nav id="category-nav" class="flex flex-col gap-1"></nav>
         </div>
-
         <hr class="border-outline-variant/30">
-
-        <!-- Price filter -->
         <div>
             <h3 class="font-label text-xs font-medium text-on-surface-variant mb-3 uppercase tracking-wider">Filtrar por Precio</h3>
             <div class="px-1">
@@ -172,150 +145,31 @@
                 </div>
             </div>
         </div>
-
         <hr class="border-outline-variant/30">
-
-        <!-- Brand filter -->
         <div>
             <h3 class="font-label text-xs font-medium text-on-surface-variant mb-3 uppercase tracking-wider">Filtrar por Marca</h3>
             <div id="brand-filter" class="flex flex-col gap-2"></div>
         </div>
     </aside>
 
-    <!-- ── MAIN CONTENT ── -->
+    <!-- MAIN CONTENT -->
     <main class="flex-1 overflow-y-auto p-8 bg-background">
-
-        <!-- Title row -->
         <div class="flex justify-between items-end mb-2">
             <div>
                 <h1 id="section-title" class="font-headline text-4xl font-black text-on-surface" style="line-height:1.15">Catálogo Interno</h1>
                 <p id="section-subtitle" class="text-on-surface-variant text-sm mt-1">Consulta rápida de precios · Papelería</p>
             </div>
-            <button onclick="openModal()"
-                    class="bg-primary-container text-on-primary-container font-label text-sm px-5 py-2.5 rounded-full hover:bg-primary-fixed transition-colors shadow-sm flex items-center gap-2 shrink-0">
-                <span class="material-symbols-outlined" style="font-size:18px">add</span>
-                Nuevo Ítem
-            </button>
         </div>
-
-        <!-- Results count -->
         <p id="results-count" class="font-label text-xs text-outline-variant mb-6 h-4"></p>
-
-        <!-- Product grid -->
         <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
-
-        <!-- Empty state -->
         <div id="empty-state" class="hidden flex-col items-center justify-center py-24 text-center">
             <div class="w-20 h-20 bg-primary-container/30 rounded-full flex items-center justify-center mb-4">
                 <span class="material-symbols-outlined text-primary/40" style="font-size:40px">search_off</span>
             </div>
             <h3 class="font-headline text-lg font-bold text-on-surface mb-1">Sin resultados</h3>
-            <p class="text-sm text-on-surface-variant">Prueba con otros filtros o agrega un nuevo producto.</p>
+            <p class="text-sm text-on-surface-variant">Prueba con otros filtros.</p>
         </div>
     </main>
-</div>
-
-<!-- ═══════════════════════ MODAL ═══════════════════════ -->
-<div id="modal-backdrop" class="fixed inset-0 z-50 hidden items-center justify-center"
-     style="background:rgba(0,0,0,0.35); backdrop-filter:blur(4px)"
-     onclick="if(event.target===this) closeModal()">
-    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg mx-4 overflow-hidden">
-
-        <!-- Modal header -->
-        <div class="flex justify-between items-center px-6 py-4 border-b border-slate-100">
-            <h2 id="modal-title" class="font-headline text-xl font-bold text-on-surface">Nuevo Producto</h2>
-            <button onclick="closeModal()" class="text-outline hover:text-on-surface p-1 rounded-full hover:bg-surface-container transition-colors">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-        </div>
-
-        <!-- Form -->
-        <form id="product-form" onsubmit="handleFormSubmit(event)" class="p-6 grid grid-cols-2 gap-4 max-h-[80vh] overflow-y-auto">
-            <input type="hidden" id="form-id">
-
-            <!-- Name -->
-            <div class="col-span-2">
-                <label class="font-label text-xs font-medium text-on-surface-variant mb-1.5 block">Nombre del Producto *</label>
-                <input type="text" id="form-name" required placeholder="Ej: Cuaderno Espiral A5"
-                       class="w-full px-3 py-2 rounded-lg border border-outline-variant bg-surface-container-low focus:outline-none focus:border-primary text-sm transition-colors">
-            </div>
-
-            <!-- Category -->
-            <div>
-                <label class="font-label text-xs font-medium text-on-surface-variant mb-1.5 block">Categoría *</label>
-                <input type="text" id="form-category" required placeholder="Ej: Cuadernos"
-                       class="w-full px-3 py-2 rounded-lg border border-outline-variant bg-surface-container-low focus:outline-none focus:border-primary text-sm transition-colors"
-                       list="category-datalist">
-                <datalist id="category-datalist"></datalist>
-            </div>
-
-            <!-- Brand -->
-            <div>
-                <label class="font-label text-xs font-medium text-on-surface-variant mb-1.5 block">Marca *</label>
-                <input type="text" id="form-brand" required placeholder="Ej: Faber-Castell"
-                       class="w-full px-3 py-2 rounded-lg border border-outline-variant bg-surface-container-low focus:outline-none focus:border-primary text-sm transition-colors"
-                       list="brand-datalist">
-                <datalist id="brand-datalist"></datalist>
-            </div>
-
-            <!-- Price -->
-            <div>
-                <label class="font-label text-xs font-medium text-on-surface-variant mb-1.5 block">Precio (S/) *</label>
-                <input type="number" id="form-price" required min="0" step="0.10" placeholder="0.00"
-                       class="w-full px-3 py-2 rounded-lg border border-outline-variant bg-surface-container-low focus:outline-none focus:border-primary text-sm transition-colors">
-            </div>
-
-            <!-- SKU -->
-            <div>
-                <label class="font-label text-xs font-medium text-on-surface-variant mb-1.5 block">SKU / Código</label>
-                <input type="text" id="form-sku" placeholder="Ej: CC-01"
-                       class="w-full px-3 py-2 rounded-lg border border-outline-variant bg-surface-container-low focus:outline-none focus:border-primary text-sm transition-colors">
-            </div>
-
-            <!-- Stock -->
-            <div class="col-span-2">
-                <label class="font-label text-xs font-medium text-on-surface-variant mb-1.5 block">Estado de Stock</label>
-                <select id="form-stock"
-                        class="w-full px-3 py-2 rounded-lg border border-outline-variant bg-surface-container-low focus:outline-none focus:border-primary text-sm transition-colors">
-                    <option value="en-stock">En Stock</option>
-                    <option value="poco-stock">Poco Stock</option>
-                    <option value="sin-stock">Sin Stock</option>
-                </select>
-            </div>
-
-            <!-- Image URL -->
-            <div class="col-span-2">
-                <label class="font-label text-xs font-medium text-on-surface-variant mb-1.5 block">URL de Imagen (opcional)</label>
-                <input type="text" id="form-image" placeholder="https://..."
-                       class="w-full px-3 py-2 rounded-lg border border-outline-variant bg-surface-container-low focus:outline-none focus:border-primary text-sm transition-colors">
-            </div>
-
-            <!-- Description -->
-            <div class="col-span-2">
-                <label class="font-label text-xs font-medium text-on-surface-variant mb-1.5 block">Descripción (opcional)</label>
-                <textarea id="form-description" rows="2" placeholder="Descripción breve del producto..."
-                          class="w-full px-3 py-2 rounded-lg border border-outline-variant bg-surface-container-low focus:outline-none focus:border-primary text-sm transition-colors resize-none"></textarea>
-            </div>
-
-            <!-- Actions -->
-            <div class="col-span-2 flex gap-3 justify-end pt-2 border-t border-slate-100 mt-1">
-                <button type="button" onclick="closeModal()"
-                        class="font-label px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-container text-sm transition-colors">
-                    Cancelar
-                </button>
-                <button type="submit"
-                        class="font-label px-5 py-2 rounded-full bg-primary text-on-primary hover:opacity-90 text-sm transition-colors shadow-sm">
-                    Guardar
-                </button>
-            </div>
-        </form>
-    </div>
-</div>
-
-<!-- ═══════════════════════ TOAST ═══════════════════════ -->
-<div id="toast" class="fixed bottom-6 right-6 z-[100] hidden items-center gap-2 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-lg text-sm font-label">
-    <span class="material-symbols-outlined text-[18px]" id="toast-icon">check_circle</span>
-    <span id="toast-msg"></span>
 </div>
 
 <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
@@ -324,65 +178,248 @@
     <span class="font-label text-xs text-slate-400"><span id="footer-count">0</span> productos registrados</span>
 </footer>
 
-<!-- ═══════════════════════ SCRIPT ═══════════════════════ -->
 <script>
-// ─── Default product catalogue ───────────────────────────────────────────────
-const DEFAULT_PRODUCTS = [
-    { id:1,  name:'Cuaderno Espiral Pastel A5',         category:'Cuadernos',  brand:'Miquelrius',    price:8.50,  sku:'CC-01', stock:'en-stock',   image:'', description:'Tapa dura, 120 hojas cuadriculadas' },
-    { id:2,  name:'Set de Marcadores Punta Fina (12u)', category:'Escritura',  brand:'Faber-Castell', price:15.00, sku:'MA-12', stock:'en-stock',   image:'', description:'12 colores vivos, punta fina 0.4mm' },
-    { id:3,  name:'Pack Washi Tape Geométrico (3u)',    category:'Decoración', brand:'Kokuyo',        price:6.50,  sku:'WT-03', stock:'poco-stock',  image:'', description:'3 rollos con diseños geométricos pasteles' },
-    { id:4,  name:'Lápices de Colores Acuarelables (24u)', category:'Arte',    brand:'Faber-Castell', price:25.00, sku:'LC-24', stock:'en-stock',   image:'', description:'24 lápices con efecto acuarela' },
-    { id:5,  name:'Bolígrafos Azul BIC (x10)',          category:'Escritura',  brand:'Bic',           price:5.00,  sku:'BP-B10',stock:'en-stock',   image:'', description:'Pack de 10 bolígrafos punta media' },
-    { id:6,  name:'Tijeras Escolar 17cm',               category:'Papelería',  brand:'Maped',         price:4.50,  sku:'TJ-17', stock:'en-stock',   image:'', description:'Punta redondeada, mango ergonómico' },
-    { id:7,  name:'Regla 30cm Transparente',            category:'Papelería',  brand:'Maped',         price:2.50,  sku:'RG-30', stock:'en-stock',   image:'', description:'Escala milimétrica, borde biselado' },
-    { id:8,  name:'Corrector Líquido 20ml',             category:'Escritura',  brand:'Bic',           price:3.50,  sku:'CL-20', stock:'poco-stock',  image:'', description:'Secado rápido, punta metálica' },
-    { id:9,  name:'Papel Bond A4 75g (500h)',           category:'Papelería',  brand:'Navigator',     price:22.00, sku:'PB-A4', stock:'en-stock',   image:'', description:'Resma 500 hojas blancas' },
-    { id:10, name:'Resaltadores Pastel (x5)',           category:'Escritura',  brand:'Pilot',         price:8.00,  sku:'RS-P5', stock:'en-stock',   image:'', description:'5 colores pasteles suaves' },
-    { id:11, name:'Cartulina de Colores A3 (x10)',      category:'Arte',       brand:'Artesco',       price:4.00,  sku:'CA-A3', stock:'en-stock',   image:'', description:'10 cartulinas de colores surtidos' },
-    { id:12, name:'Pegamento en Barra 21g',             category:'Papelería',  brand:'UHU',           price:3.00,  sku:'PG-21', stock:'sin-stock',  image:'', description:'Sin mancha, lavable' },
-    { id:13, name:'Compás Escolar de Metal',            category:'Papelería',  brand:'Maped',         price:9.50,  sku:'CP-01', stock:'en-stock',   image:'', description:'Compás con adaptador universal' },
-    { id:14, name:'Bloc Post-it 3×3" (90h)',            category:'Cuadernos',  brand:'Post-it',       price:7.50,  sku:'BN-33', stock:'en-stock',   image:'', description:'Autoadhesivo, 90 hojas amarillas' },
-    { id:15, name:'Set de Acuarelas 24 Colores',        category:'Arte',       brand:'Maped',         price:18.00, sku:'AC-24', stock:'poco-stock',  image:'', description:'Caja metálica, colores vibrantes' },
-    { id:16, name:'Gaseosa Inca Kola 500ml',            category:'Bebidas',    brand:'Inca Kola',     price:2.50,  sku:'GAS-01',stock:'en-stock',   image:'', description:'Gaseosa nacional botella personal' },
-    { id:17, name:'Gaseosa Coca-Cola 500ml',            category:'Bebidas',    brand:'Coca-Cola',     price:2.50,  sku:'GAS-02',stock:'en-stock',   image:'', description:'Gaseosa botella personal' },
-    { id:18, name:'Agua San Luis 625ml',                category:'Bebidas',    brand:'San Luis',      price:1.50,  sku:'AGU-01',stock:'en-stock',   image:'', description:'Agua sin gas botella mediana' },
+// ═══════════════════════════════════════════════════════════════════════════════
+//
+//   CATÁLOGO DE PRODUCTOS D'CECIS
+//   ─────────────────────────────
+//   Para actualizar precios o agregar productos, editar el array PRODUCTOS
+//   y subir los cambios a GitHub. Todos verán la actualización al recargar.
+//
+//   Campos por producto:
+//     nombre      → nombre visible del producto
+//     categoria   → 'Cuadernos' | 'Escritura' | 'Papelería' | 'Arte' | 'Decoración'
+//                   (para sección Otros: 'Bebidas' | 'Snacks' | etc.)
+//     marca       → nombre de la marca
+//     precio      → número en soles, ej: 8.50
+//     sku         → código interno, ej: 'CC-01' (opcional)
+//     stock       → 'en-stock' | 'poco-stock' | 'sin-stock'
+//     imagen      → URL de la imagen (dejar '' si no tiene)
+//     descripcion → texto corto descriptivo (opcional)
+//
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const PRODUCTOS = [
+
+    // ── CUADERNOS ─────────────────────────────────────────────────────────────
+    {
+        nombre:      'Cuaderno Espiral Pastel A5',
+        categoria:   'Cuadernos',
+        marca:       'Miquelrius',
+        precio:      8.50,
+        sku:         'CC-01',
+        stock:       'en-stock',
+        imagen:      '',
+        descripcion: 'Tapa dura, 120 hojas cuadriculadas',
+    },
+    {
+        nombre:      'Bloc Post-it 3×3" (90h)',
+        categoria:   'Cuadernos',
+        marca:       'Post-it',
+        precio:      7.50,
+        sku:         'BN-33',
+        stock:       'en-stock',
+        imagen:      '',
+        descripcion: 'Autoadhesivo, 90 hojas amarillas',
+    },
+
+    // ── ESCRITURA ─────────────────────────────────────────────────────────────
+    {
+        nombre:      'Set de Marcadores Punta Fina (12u)',
+        categoria:   'Escritura',
+        marca:       'Faber-Castell',
+        precio:      15.00,
+        sku:         'MA-12',
+        stock:       'en-stock',
+        imagen:      '',
+        descripcion: '12 colores vivos, punta fina 0.4mm',
+    },
+    {
+        nombre:      'Bolígrafos Azul BIC (x10)',
+        categoria:   'Escritura',
+        marca:       'Bic',
+        precio:      5.00,
+        sku:         'BP-B10',
+        stock:       'en-stock',
+        imagen:      '',
+        descripcion: 'Pack de 10 bolígrafos punta media',
+    },
+    {
+        nombre:      'Corrector Líquido 20ml',
+        categoria:   'Escritura',
+        marca:       'Bic',
+        precio:      3.50,
+        sku:         'CL-20',
+        stock:       'poco-stock',
+        imagen:      '',
+        descripcion: 'Secado rápido, punta metálica',
+    },
+    {
+        nombre:      'Resaltadores Pastel (x5)',
+        categoria:   'Escritura',
+        marca:       'Pilot',
+        precio:      8.00,
+        sku:         'RS-P5',
+        stock:       'en-stock',
+        imagen:      '',
+        descripcion: '5 colores pasteles suaves',
+    },
+
+    // ── PAPELERÍA ─────────────────────────────────────────────────────────────
+    {
+        nombre:      'Tijeras Escolar 17cm',
+        categoria:   'Papelería',
+        marca:       'Maped',
+        precio:      4.50,
+        sku:         'TJ-17',
+        stock:       'en-stock',
+        imagen:      '',
+        descripcion: 'Punta redondeada, mango ergonómico',
+    },
+    {
+        nombre:      'Regla 30cm Transparente',
+        categoria:   'Papelería',
+        marca:       'Maped',
+        precio:      2.50,
+        sku:         'RG-30',
+        stock:       'en-stock',
+        imagen:      '',
+        descripcion: 'Escala milimétrica, borde biselado',
+    },
+    {
+        nombre:      'Papel Bond A4 75g (500h)',
+        categoria:   'Papelería',
+        marca:       'Navigator',
+        precio:      22.00,
+        sku:         'PB-A4',
+        stock:       'en-stock',
+        imagen:      '',
+        descripcion: 'Resma 500 hojas blancas',
+    },
+    {
+        nombre:      'Pegamento en Barra 21g',
+        categoria:   'Papelería',
+        marca:       'UHU',
+        precio:      3.00,
+        sku:         'PG-21',
+        stock:       'sin-stock',
+        imagen:      '',
+        descripcion: 'Sin mancha, lavable',
+    },
+    {
+        nombre:      'Compás Escolar de Metal',
+        categoria:   'Papelería',
+        marca:       'Maped',
+        precio:      9.50,
+        sku:         'CP-01',
+        stock:       'en-stock',
+        imagen:      '',
+        descripcion: 'Compás con adaptador universal',
+    },
+
+    // ── ARTE ──────────────────────────────────────────────────────────────────
+    {
+        nombre:      'Lápices de Colores Acuarelables (24u)',
+        categoria:   'Arte',
+        marca:       'Faber-Castell',
+        precio:      25.00,
+        sku:         'LC-24',
+        stock:       'en-stock',
+        imagen:      '',
+        descripcion: '24 lápices con efecto acuarela',
+    },
+    {
+        nombre:      'Cartulina de Colores A3 (x10)',
+        categoria:   'Arte',
+        marca:       'Artesco',
+        precio:      4.00,
+        sku:         'CA-A3',
+        stock:       'en-stock',
+        imagen:      '',
+        descripcion: '10 cartulinas de colores surtidos',
+    },
+    {
+        nombre:      'Set de Acuarelas 24 Colores',
+        categoria:   'Arte',
+        marca:       'Maped',
+        precio:      18.00,
+        sku:         'AC-24',
+        stock:       'poco-stock',
+        imagen:      '',
+        descripcion: 'Caja metálica, colores vibrantes',
+    },
+
+    // ── DECORACIÓN ────────────────────────────────────────────────────────────
+    {
+        nombre:      'Pack Washi Tape Geométrico (3u)',
+        categoria:   'Decoración',
+        marca:       'Kokuyo',
+        precio:      6.50,
+        sku:         'WT-03',
+        stock:       'poco-stock',
+        imagen:      '',
+        descripcion: '3 rollos con diseños geométricos pasteles',
+    },
+
+    // ── BEBIDAS (sección Otros) ────────────────────────────────────────────────
+    {
+        nombre:      'Gaseosa Inca Kola 500ml',
+        categoria:   'Bebidas',
+        marca:       'Inca Kola',
+        precio:      2.50,
+        sku:         'GAS-01',
+        stock:       'en-stock',
+        imagen:      '',
+        descripcion: 'Botella personal',
+    },
+    {
+        nombre:      'Gaseosa Coca-Cola 500ml',
+        categoria:   'Bebidas',
+        marca:       'Coca-Cola',
+        precio:      2.50,
+        sku:         'GAS-02',
+        stock:       'en-stock',
+        imagen:      '',
+        descripcion: 'Botella personal',
+    },
+    {
+        nombre:      'Agua San Luis 625ml',
+        categoria:   'Bebidas',
+        marca:       'San Luis',
+        precio:      1.50,
+        sku:         'AGU-01',
+        stock:       'en-stock',
+        imagen:      '',
+        descripcion: 'Agua sin gas, botella mediana',
+    },
+
 ];
 
-// ─── Category config: icon (Material Symbol) + card background color ─────────
-const CAT_CONFIG = {
-    'Cuadernos':  { icon:'menu_book',     bg:'bg-pink-100'   },
-    'Escritura':  { icon:'edit',          bg:'bg-blue-100'   },
-    'Papelería':  { icon:'auto_stories',  bg:'bg-violet-100' },
-    'Arte':       { icon:'palette',       bg:'bg-amber-100'  },
-    'Decoración': { icon:'favorite',      bg:'bg-green-100'  },
-    'Bebidas':    { icon:'local_cafe',    bg:'bg-orange-100' },
-    'Otros':      { icon:'category',      bg:'bg-teal-100'   },
-};
-const DEFAULT_CAT = { icon:'inventory_2', bg:'bg-slate-100' };
+// ═══════════════════════════════════════════════════════════════════════════════
+//  Configuración de categorías (ícono + color de fondo de tarjeta)
+// ═══════════════════════════════════════════════════════════════════════════════
 
-// Papelería section includes these categories; everything else goes to "Otros"
+const CAT_CONFIG = {
+    'Cuadernos':  { icon: 'menu_book',    bg: 'bg-pink-100'   },
+    'Escritura':  { icon: 'edit',         bg: 'bg-blue-100'   },
+    'Papelería':  { icon: 'auto_stories', bg: 'bg-violet-100' },
+    'Arte':       { icon: 'palette',      bg: 'bg-amber-100'  },
+    'Decoración': { icon: 'favorite',     bg: 'bg-green-100'  },
+    'Bebidas':    { icon: 'local_cafe',   bg: 'bg-orange-100' },
+    'Snacks':     { icon: 'bakery_dining',bg: 'bg-lime-100'   },
+};
+const DEFAULT_CAT = { icon: 'inventory_2', bg: 'bg-slate-100' };
+
 const PAPELERIA_CATS = new Set(['Cuadernos','Escritura','Papelería','Arte','Decoración']);
 
-// ─── App state ────────────────────────────────────────────────────────────────
-let products        = [];
+// ─── Estado de la app ─────────────────────────────────────────────────────────
 let currentSection  = 'papeleria';
 let activeCategory  = 'all';
 let searchQuery     = '';
 let maxPricePercent = 100;
 let selectedBrands  = new Set();
 
-// ─── Persistence ─────────────────────────────────────────────────────────────
-function loadProducts() {
-    try {
-        const raw = localStorage.getItem('dcecis_v2');
-        products = raw ? JSON.parse(raw) : structuredClone(DEFAULT_PRODUCTS);
-    } catch { products = structuredClone(DEFAULT_PRODUCTS); }
-}
-function saveProducts() {
-    localStorage.setItem('dcecis_v2', JSON.stringify(products));
-}
-
-// ─── Section switch ───────────────────────────────────────────────────────────
+// ─── Cambio de sección ────────────────────────────────────────────────────────
 function switchSection(section) {
     currentSection  = section;
     activeCategory  = 'all';
@@ -409,45 +446,42 @@ function switchSection(section) {
         document.getElementById('section-title').textContent    = 'Catálogo Interno';
         document.getElementById('section-subtitle').textContent = 'Consulta rápida de precios · Papelería';
     }
-
     buildSidebar();
     render();
 }
 
-// ─── Section products ─────────────────────────────────────────────────────────
+// ─── Productos de la sección activa ───────────────────────────────────────────
 function sectionProducts() {
     return currentSection === 'otros'
-        ? products.filter(p => !PAPELERIA_CATS.has(p.category))
-        : products.filter(p =>  PAPELERIA_CATS.has(p.category));
+        ? PRODUCTOS.filter(p => !PAPELERIA_CATS.has(p.categoria))
+        : PRODUCTOS.filter(p =>  PAPELERIA_CATS.has(p.categoria));
 }
 
-// ─── Filtering ────────────────────────────────────────────────────────────────
+// ─── Filtrado ─────────────────────────────────────────────────────────────────
 function maxPriceInSection() {
     const sp = sectionProducts();
-    return sp.length ? Math.ceil(Math.max(...sp.map(p => p.price))) : 100;
+    return sp.length ? Math.ceil(Math.max(...sp.map(p => p.precio))) : 100;
 }
 
 function filteredProducts() {
     const maxP  = maxPriceInSection();
     const limit = maxPricePercent >= 100 ? Infinity : (maxPricePercent / 100) * maxP;
     const q     = searchQuery.toLowerCase();
-
     return sectionProducts().filter(p => {
-        if (q && ![p.name, p.brand, p.category, p.sku||''].some(s => s.toLowerCase().includes(q))) return false;
-        if (activeCategory !== 'all' && p.category !== activeCategory) return false;
-        if (p.price > limit) return false;
-        if (selectedBrands.size > 0 && !selectedBrands.has(p.brand)) return false;
+        if (q && ![p.nombre, p.marca, p.categoria, p.sku || ''].some(s => s.toLowerCase().includes(q))) return false;
+        if (activeCategory !== 'all' && p.categoria !== activeCategory) return false;
+        if (p.precio > limit) return false;
+        if (selectedBrands.size > 0 && !selectedBrands.has(p.marca)) return false;
         return true;
     });
 }
 
-function handleSearch(v)       { searchQuery = v; render(); }
+function handleSearch(v) { searchQuery = v; render(); }
 function handlePriceFilter(v) {
     maxPricePercent = parseInt(v);
     const maxP = maxPriceInSection();
-    const disp = document.getElementById('price-display');
-    if (maxPricePercent >= 100) disp.textContent = `S/ ${maxP}+`;
-    else disp.textContent = `S/ ${Math.round((maxPricePercent / 100) * maxP)}`;
+    document.getElementById('price-display').textContent =
+        maxPricePercent >= 100 ? `S/ ${maxP}+` : `S/ ${Math.round((maxPricePercent / 100) * maxP)}`;
     render();
 }
 function handleBrandToggle(b) {
@@ -457,7 +491,7 @@ function handleBrandToggle(b) {
 function setCategory(cat) {
     activeCategory = cat;
     document.querySelectorAll('.cat-link').forEach(l => l.classList.remove('active'));
-    const el = document.querySelector(`.cat-link[data-cat="${cat}"]`);
+    const el = document.querySelector(`.cat-link[data-cat="${CSS.escape(cat)}"]`);
     if (el) el.classList.add('active');
     render();
 }
@@ -465,26 +499,21 @@ function setCategory(cat) {
 // ─── Sidebar ──────────────────────────────────────────────────────────────────
 function buildSidebar() {
     const sp = sectionProducts();
-
-    // Categories
-    const cats = ['all', ...[...new Set(sp.map(p => p.category))]];
+    const cats = ['all', ...[...new Set(sp.map(p => p.categoria))]];
     document.getElementById('category-nav').innerHTML = cats.map(cat => {
-        const cfg   = cat === 'all' ? { icon:'grid_view' } : (CAT_CONFIG[cat] || DEFAULT_CAT);
+        const cfg   = cat === 'all' ? { icon: 'grid_view' } : (CAT_CONFIG[cat] || DEFAULT_CAT);
         const label = cat === 'all' ? 'Catálogo' : cat;
-        const count = cat === 'all' ? sp.length : sp.filter(p => p.category === cat).length;
-        const isAct = activeCategory === cat;
+        const count = cat === 'all' ? sp.length : sp.filter(p => p.categoria === cat).length;
         return `
-        <a href="#" onclick="setCategory('${cat}'); return false;"
-           data-cat="${cat}"
-           class="cat-link flex items-center gap-3 p-2 text-slate-600 hover:bg-slate-100 rounded-lg text-sm font-headline ${isAct ? 'active' : ''}">
+        <a href="#" onclick="setCategory('${cat}'); return false;" data-cat="${cat}"
+           class="cat-link flex items-center gap-3 p-2 text-slate-600 hover:bg-slate-100 rounded-lg text-sm font-headline ${activeCategory === cat ? 'active' : ''}">
             <span class="material-symbols-outlined" style="font-size:20px">${cfg.icon}</span>
             <span class="flex-1">${label}</span>
             <span class="font-label text-xs text-outline-variant">${count}</span>
         </a>`;
     }).join('');
 
-    // Brands
-    const brands = [...new Set(sp.map(p => p.brand))].sort();
+    const brands = [...new Set(sp.map(p => p.marca))].sort();
     document.getElementById('brand-filter').innerHTML = brands.map(b => `
         <label class="flex items-center gap-3 cursor-pointer group">
             <input type="checkbox" ${selectedBrands.has(b) ? 'checked' : ''}
@@ -493,17 +522,14 @@ function buildSidebar() {
             <span class="text-sm text-on-surface group-hover:text-primary transition-colors">${b}</span>
         </label>`).join('');
 
-    // Price display
     const maxP = maxPriceInSection();
     document.getElementById('price-display').textContent = `S/ ${maxP}+`;
     document.getElementById('price-range').value = 100;
     maxPricePercent = 100;
 }
 
-// ─── Format helpers ───────────────────────────────────────────────────────────
-function fmtPrice(p) {
-    return `S/ ${p.toFixed(2).replace('.', ',')}`;
-}
+// ─── Badges y helpers ─────────────────────────────────────────────────────────
+function fmtPrice(p) { return `S/ ${p.toFixed(2).replace('.', ',')}` }
 
 function stockBadge(stock) {
     if (stock === 'en-stock')   return `<div class="absolute top-2 left-2 z-10 bg-tertiary-container/90 text-on-tertiary-container font-label text-[10px] px-2 py-0.5 rounded-sm uppercase border border-tertiary-fixed/50 shadow-sm -rotate-1" style="letter-spacing:.05em">En Stock</div>`;
@@ -512,66 +538,41 @@ function stockBadge(stock) {
     return '';
 }
 
-function cardBg(cat) { return (CAT_CONFIG[cat] || DEFAULT_CAT).bg; }
-function cardIcon(cat) { return (CAT_CONFIG[cat] || DEFAULT_CAT).icon; }
-
-// ─── Render cards ─────────────────────────────────────────────────────────────
+// ─── Tarjeta de producto ──────────────────────────────────────────────────────
 function renderCard(p) {
-    const bg   = cardBg(p.category);
-    const icon = cardIcon(p.category);
-    const img  = p.image
-        ? `<img src="${p.image}" alt="${p.name}" class="object-contain h-full w-full group-hover:scale-105 transition-transform duration-300 mix-blend-multiply" onerror="this.style.display='none'">`
-        : `<span class="material-symbols-outlined text-slate-300" style="font-size:56px">${icon}</span>`;
-
+    const cfg  = CAT_CONFIG[p.categoria] || DEFAULT_CAT;
+    const img  = p.imagen
+        ? `<img src="${p.imagen}" alt="${p.nombre}" class="object-contain h-full w-full group-hover:scale-105 transition-transform duration-300 mix-blend-multiply" onerror="this.style.display='none'">`
+        : `<span class="material-symbols-outlined text-slate-300" style="font-size:56px">${cfg.icon}</span>`;
     return `
     <div class="product-card bg-white rounded-xl overflow-hidden border border-surface-variant/50 group flex flex-col relative">
         ${stockBadge(p.stock)}
-
-        <!-- Hover action buttons -->
-        <div class="absolute top-2 right-2 z-10 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-            <button onclick="openModal(${p.id})"
-                    class="bg-white/90 backdrop-blur-sm text-slate-500 hover:text-primary p-1 rounded-lg shadow-sm transition-colors" title="Editar producto">
-                <span class="material-symbols-outlined" style="font-size:18px">edit</span>
-            </button>
-            <button onclick="deleteProduct(${p.id})"
-                    class="bg-white/90 backdrop-blur-sm text-slate-500 hover:text-error p-1 rounded-lg shadow-sm transition-colors" title="Eliminar">
-                <span class="material-symbols-outlined" style="font-size:18px">delete</span>
-            </button>
-        </div>
-
-        <!-- Image area -->
-        <div class="${bg} h-44 p-4 flex items-center justify-center relative overflow-hidden">
+        <div class="${cfg.bg} h-44 p-4 flex items-center justify-center relative overflow-hidden">
             ${img}
         </div>
-
-        <!-- Card body -->
         <div class="p-4 flex flex-col flex-1 bg-surface-container-lowest">
-            <p class="font-label text-xs text-outline mb-1">${p.category}</p>
-            <h3 class="text-sm font-medium text-on-surface leading-snug flex-1">${p.name}</h3>
-            ${p.description ? `<p class="text-xs text-outline-variant mt-1.5 leading-relaxed line-clamp-2">${p.description}</p>` : ''}
+            <p class="font-label text-xs text-outline mb-1">${p.categoria}</p>
+            <h3 class="text-sm font-medium text-on-surface leading-snug flex-1">${p.nombre}</h3>
+            ${p.descripcion ? `<p class="text-xs text-outline-variant mt-1.5 leading-relaxed line-clamp-2">${p.descripcion}</p>` : ''}
             <div class="flex justify-between items-end mt-3 pt-2 border-t border-surface-variant/40">
-                <!-- Editable price -->
-                <button onclick="startPriceEdit(${p.id}, this)"
-                        class="font-headline text-xl font-bold text-primary hover:text-on-primary-container transition-colors group/p flex items-end gap-1" title="Click para editar precio">
-                    <span class="price-val">${fmtPrice(p.price)}</span>
-                    <span class="material-symbols-outlined text-[13px] mb-0.5 opacity-0 group-hover/p:opacity-50 transition-opacity">edit</span>
-                </button>
+                <span class="font-headline text-xl font-bold text-primary">${fmtPrice(p.precio)}</span>
                 <div class="text-right">
                     <span class="font-label text-[11px] text-outline-variant block">${p.sku || '—'}</span>
-                    <span class="font-label text-[11px] text-outline-variant">${p.brand}</span>
+                    <span class="font-label text-[11px] text-outline-variant">${p.marca}</span>
                 </div>
             </div>
         </div>
     </div>`;
 }
 
+// ─── Render principal ─────────────────────────────────────────────────────────
 function render() {
-    const fp  = filteredProducts();
-    const sp  = sectionProducts();
-    const grid = document.getElementById('product-grid');
+    const fp    = filteredProducts();
+    const sp    = sectionProducts();
+    const grid  = document.getElementById('product-grid');
     const empty = document.getElementById('empty-state');
 
-    document.getElementById('footer-count').textContent = products.length;
+    document.getElementById('footer-count').textContent = PRODUCTOS.length;
 
     if (fp.length === 0) {
         grid.innerHTML = '';
@@ -591,140 +592,15 @@ function render() {
     }
 }
 
-// ─── Inline price edit ────────────────────────────────────────────────────────
-function startPriceEdit(id, btn) {
-    const product = products.find(p => p.id === id);
-    if (!product) return;
-    const span = btn.querySelector('.price-val');
-
-    const inp = document.createElement('input');
-    inp.type      = 'number';
-    inp.value     = product.price;
-    inp.step      = '0.10';
-    inp.min       = '0';
-    inp.className = 'w-24 text-xl font-bold text-primary bg-primary-container/30 rounded px-1 focus:outline-none border-b-2 border-primary font-headline';
-
-    btn.replaceWith(inp);
-    inp.focus();
-    inp.select();
-
-    function commit() {
-        const v = parseFloat(inp.value);
-        if (!isNaN(v) && v >= 0) {
-            product.price = v;
-            saveProducts();
-            showToast('Precio actualizado');
-        }
-        render();
-    }
-
-    inp.addEventListener('blur', commit);
-    inp.addEventListener('keydown', e => {
-        if (e.key === 'Enter')  inp.blur();
-        if (e.key === 'Escape') render();
-    });
-}
-
-// ─── Modal ────────────────────────────────────────────────────────────────────
-function openModal(id = null) {
-    // Populate datalists
-    const cats   = [...new Set(products.map(p => p.category))];
-    const brands = [...new Set(products.map(p => p.brand))];
-    document.getElementById('category-datalist').innerHTML = cats.map(c => `<option value="${c}">`).join('');
-    document.getElementById('brand-datalist').innerHTML    = brands.map(b => `<option value="${b}">`).join('');
-
-    const p = id ? products.find(x => x.id === id) : null;
-    document.getElementById('modal-title').textContent = p ? 'Editar Producto' : 'Nuevo Producto';
-    document.getElementById('form-id').value          = p ? p.id : '';
-    document.getElementById('form-name').value        = p ? p.name        : '';
-    document.getElementById('form-category').value    = p ? p.category    : '';
-    document.getElementById('form-brand').value       = p ? p.brand       : '';
-    document.getElementById('form-price').value       = p ? p.price       : '';
-    document.getElementById('form-sku').value         = p ? (p.sku || '')  : '';
-    document.getElementById('form-stock').value       = p ? p.stock       : 'en-stock';
-    document.getElementById('form-image').value       = p ? (p.image||'') : '';
-    document.getElementById('form-description').value = p ? (p.description||'') : '';
-
-    const bk = document.getElementById('modal-backdrop');
-    bk.classList.remove('hidden');
-    bk.classList.add('flex');
-    setTimeout(() => document.getElementById('form-name').focus(), 50);
-}
-
-function closeModal() {
-    const bk = document.getElementById('modal-backdrop');
-    bk.classList.add('hidden');
-    bk.classList.remove('flex');
-}
-
-function handleFormSubmit(e) {
-    e.preventDefault();
-    const rawId = document.getElementById('form-id').value;
-    const data = {
-        name:        document.getElementById('form-name').value.trim(),
-        category:    document.getElementById('form-category').value.trim(),
-        brand:       document.getElementById('form-brand').value.trim(),
-        price:       parseFloat(document.getElementById('form-price').value),
-        sku:         document.getElementById('form-sku').value.trim(),
-        stock:       document.getElementById('form-stock').value,
-        image:       document.getElementById('form-image').value.trim(),
-        description: document.getElementById('form-description').value.trim(),
-    };
-
-    if (rawId) {
-        const i = products.findIndex(p => p.id === parseInt(rawId));
-        if (i !== -1) products[i] = { ...products[i], ...data };
-        showToast('Producto actualizado');
-    } else {
-        data.id = Date.now();
-        products.push(data);
-        showToast('Producto agregado');
-    }
-
-    saveProducts();
-    closeModal();
-    buildSidebar();
-    render();
-}
-
-// ─── Delete ───────────────────────────────────────────────────────────────────
-function deleteProduct(id) {
-    if (!confirm('¿Eliminar este producto del catálogo?')) return;
-    products = products.filter(p => p.id !== id);
-    saveProducts();
-    showToast('Producto eliminado');
-    buildSidebar();
-    render();
-}
-
-// ─── Toast notification ───────────────────────────────────────────────────────
-let toastTimer;
-function showToast(msg, icon = 'check_circle') {
-    const t = document.getElementById('toast');
-    document.getElementById('toast-msg').textContent  = msg;
-    document.getElementById('toast-icon').textContent = icon;
-    t.classList.remove('hidden');
-    t.classList.add('flex');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => {
-        t.classList.add('hidden');
-        t.classList.remove('flex');
-    }, 2500);
-}
-
-// ─── Keyboard shortcuts ───────────────────────────────────────────────────────
+// ─── Atajos de teclado ────────────────────────────────────────────────────────
 document.addEventListener('keydown', e => {
-    // Escape closes modal
-    if (e.key === 'Escape') closeModal();
-    // Ctrl/Cmd + K focuses search
     if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
         document.getElementById('search-input').focus();
     }
 });
 
-// ─── Init ─────────────────────────────────────────────────────────────────────
-loadProducts();
+// ─── Arranque ─────────────────────────────────────────────────────────────────
 buildSidebar();
 render();
 </script>
