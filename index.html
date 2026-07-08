@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D'Cecis — Catálogo Interno</title>
+    <meta name="description" content="Catálogo de precios D'Cecis — papelería, útiles y más. Consulta rápida de precios.">
+    <meta name="theme-color" content="#81515b">
+    <title>D'Cecis — Catálogo de Precios</title>
+
+    <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/logo-mark.svg">
+
     <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700;900&family=Lexend:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700;800;900&family=Lexend:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
 
     <script>
@@ -35,16 +41,16 @@
                         'on-error':                 '#ffffff',
                         'error-container':          '#ffdad6',
                         'on-error-container':       '#93000a',
-                        background:                 '#f8f9fa',
+                        background:                 '#faf7f7',
                         'on-background':            '#191c1d',
-                        surface:                    '#f8f9fa',
+                        surface:                    '#faf7f7',
                         'on-surface':               '#191c1d',
                         'surface-variant':          '#e1e3e4',
                         'on-surface-variant':       '#514345',
                         'surface-container-lowest': '#ffffff',
-                        'surface-container-low':    '#f3f4f5',
-                        'surface-container':        '#edeeef',
-                        'surface-container-high':   '#e7e8e9',
+                        'surface-container-low':    '#f5f1f2',
+                        'surface-container':        '#efeaeb',
+                        'surface-container-high':   '#e9e4e5',
                         'surface-container-highest':'#e1e3e4',
                         outline:                    '#837375',
                         'outline-variant':          '#d5c2c4',
@@ -57,12 +63,13 @@
     </script>
 
     <!-- Safelist para clases dinámicas de Tailwind -->
-    <div class="hidden bg-pink-100 bg-blue-100 bg-violet-100 bg-amber-100 bg-green-100 bg-orange-100 bg-slate-100 bg-rose-100 bg-teal-100 bg-cyan-100 bg-lime-100 bg-indigo-100"></div>
+    <div class="hidden bg-pink-100 bg-blue-100 bg-violet-100 bg-amber-100 bg-green-100 bg-orange-100 bg-slate-100 bg-rose-100 bg-teal-100 bg-cyan-100 bg-lime-100 bg-indigo-100 bg-yellow-100 bg-fuchsia-100 bg-sky-100 bg-emerald-100"></div>
 
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; -webkit-tap-highlight-color: transparent; }
         .font-headline { font-family: 'Epilogue', sans-serif; }
         .font-label    { font-family: 'Lexend', sans-serif; }
+        html { scroll-behavior: smooth; }
 
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -71,417 +78,448 @@
 
         input[type="range"] { -webkit-appearance: none; appearance: none; background: transparent; cursor: pointer; }
         input[type="range"]::-webkit-slider-runnable-track { background: #ffc1cc; height: 6px; border-radius: 9999px; }
-        input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; margin-top: -5px; background-color: #81515b; height: 16px; width: 16px; border-radius: 9999px; }
+        input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; margin-top: -6px; background-color: #81515b; height: 18px; width: 18px; border-radius: 9999px; box-shadow: 0 1px 3px rgba(0,0,0,.25); }
         input[type="range"]::-moz-range-track { background: #ffc1cc; height: 6px; border-radius: 9999px; }
-        input[type="range"]::-moz-range-thumb { background: #81515b; height: 16px; width: 16px; border-radius: 9999px; border: none; }
+        input[type="range"]::-moz-range-thumb { background: #81515b; height: 18px; width: 18px; border-radius: 9999px; border: none; }
 
-        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #d5c2c4; border-radius: 9999px; }
         ::-webkit-scrollbar-thumb:hover { background: #837375; }
 
-        .product-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-        .product-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(129,81,91,0.13); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-        .cat-link { transition: all 0.15s ease; }
-        .cat-link.active { background: white; color: #81515b; font-weight: 700; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+        .product-card { transition: transform .22s cubic-bezier(.2,.8,.2,1), box-shadow .22s ease; }
+        @media (hover: hover) {
+            .product-card:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(129,81,91,0.16); }
+            .product-card:hover .card-img { transform: scale(1.06); }
+        }
+        .card-img { transition: transform .35s ease; }
+
+        .cat-link { transition: all .15s ease; }
+        .cat-link.active { background: #81515b; color: #fff; font-weight: 700; box-shadow: 0 3px 10px rgba(129,81,91,.28); }
+        .cat-link.active .cat-count { color: #ffd9df; }
+
+        .chip { transition: all .15s ease; }
+        .chip.active { background: #81515b; color: #fff; border-color: #81515b; }
+
+        @keyframes cardIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+        .product-card { animation: cardIn .4s ease both; }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .spin { animation: spin .9s linear infinite; }
+
+        #filter-drawer { transition: transform .3s cubic-bezier(.2,.8,.2,1); }
+        #filter-backdrop { transition: opacity .3s ease; }
+
+        .glass-header { background: rgba(255,255,255,.82); backdrop-filter: saturate(180%) blur(12px); -webkit-backdrop-filter: saturate(180%) blur(12px); }
     </style>
 </head>
 <body class="bg-background text-on-surface min-h-screen flex flex-col">
 
 <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
-<header class="flex justify-between items-center w-full px-8 h-16 sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
-    <div class="flex items-center gap-8">
-        <span class="text-2xl font-black text-primary tracking-tight font-headline select-none">D'Cecis</span>
-        <nav class="hidden md:flex gap-1">
+<header class="sticky top-0 z-40 glass-header border-b border-outline-variant/40">
+    <div class="flex items-center gap-3 sm:gap-5 w-full max-w-[1600px] mx-auto px-4 sm:px-6 h-16">
+
+        <!-- Logo -->
+        <a href="#" onclick="resetAll(); return false;" class="flex items-center gap-2.5 shrink-0 select-none group">
+            <span class="w-9 h-9 sm:w-10 sm:h-10 block group-active:scale-95 transition-transform">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-sm">
+                    <defs><linearGradient id="dc-grad" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse"><stop stop-color="#9a6470"/><stop offset="1" stop-color="#81515b"/></linearGradient></defs>
+                    <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#dc-grad)"/>
+                    <path d="M14 22c5-2.6 9.6-2.6 14 0v22c-4.4-2.6-9-2.6-14 0V22Z" fill="#ffffff" fill-opacity="0.96"/>
+                    <path d="M50 22c-5-2.6-9.6-2.6-14 0v22c4.4-2.6 9-2.6 14 0V22Z" fill="#ffd9df"/>
+                    <path d="M32 20v25" stroke="#81515b" stroke-width="2.4" stroke-linecap="round"/>
+                    <path d="M18 27c2.6-1 5-1 7 0M18 32c2.6-1 5-1 7 0" stroke="#f3b7c1" stroke-width="1.6" stroke-linecap="round"/>
+                    <path d="M40 12l4 2-9 16-4-2 9-16Z" fill="#f3b7c1"/>
+                    <path d="M40 12l4 2 1.6-2.8a1.4 1.4 0 0 0-.6-1.9l-1.5-.8a1.4 1.4 0 0 0-1.9.6L40 12Z" fill="#456554"/>
+                    <path d="M31 28l4 2-.4 3.6L31 28Z" fill="#34647b"/>
+                </svg>
+            </span>
+            <span class="flex flex-col leading-none">
+                <span class="text-xl sm:text-2xl font-black text-primary tracking-tight font-headline">D'Cecis</span>
+                <span class="hidden sm:block text-[10px] font-label text-outline tracking-[0.18em] uppercase">Papelería</span>
+            </span>
+        </a>
+
+        <!-- Nav de secciones (desktop) -->
+        <nav class="hidden lg:flex gap-1 ml-2">
             <a id="nav-papeleria" href="#" onclick="switchSection('papeleria'); return false;"
-               class="nav-tab font-headline font-bold text-sm text-primary border-b-2 border-primary px-3 py-2 rounded-t-lg transition-colors">
-                Papelería
-            </a>
-            <a id="nav-ropa" href="REEMPLAZAR_CON_LINK_DE_ROPA" target="_blank" rel="noopener noreferrer"
-               class="nav-tab font-headline font-medium text-sm text-slate-500 hover:text-primary hover:bg-pink-50 transition-colors px-3 py-2 rounded-lg flex items-center gap-1">
-                Ropa
-                <span class="material-symbols-outlined" style="font-size:14px">open_in_new</span>
-            </a>
+               class="nav-tab font-headline font-bold text-sm text-primary px-3 py-2 rounded-lg transition-colors">Librería</a>
             <a id="nav-otros" href="#" onclick="switchSection('otros'); return false;"
-               class="nav-tab font-headline font-medium text-sm text-slate-500 hover:text-primary hover:bg-pink-50 transition-colors px-3 py-2 rounded-lg">
-                Otros
-            </a>
+               class="nav-tab font-headline font-medium text-sm text-slate-500 hover:text-primary hover:bg-primary-container/30 transition-colors px-3 py-2 rounded-lg">Otros</a>
         </nav>
-    </div>
-    <div class="flex items-center gap-3">
-        <div class="relative hidden sm:block">
-            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" style="font-size:20px">search</span>
-            <input id="search-input" type="text" placeholder="Buscar producto o marca..."
-                   class="bg-surface-container border-2 border-transparent focus:border-primary-container rounded-full pl-9 pr-4 py-2 text-sm focus:outline-none transition-colors w-60 text-on-surface placeholder:text-outline-variant"
+
+        <!-- Buscador (siempre visible) -->
+        <div class="relative flex-1 max-w-xl">
+            <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none" style="font-size:20px">search</span>
+            <input id="search-input" type="text" inputmode="search" autocomplete="off" placeholder="Buscar producto o marca…"
+                   class="w-full bg-surface-container border-2 border-transparent focus:border-primary rounded-full pl-10 pr-9 py-2.5 text-sm focus:outline-none transition-colors text-on-surface placeholder:text-outline"
                    oninput="handleSearch(this.value)">
+            <button id="search-clear" onclick="clearSearch()" class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-outline hover:text-primary p-1 rounded-full" title="Limpiar">
+                <span class="material-symbols-outlined" style="font-size:18px">close</span>
+            </button>
         </div>
-        <button class="text-primary hover:bg-pink-50 transition-colors p-2 rounded-full" title="Notificaciones">
-            <span class="material-symbols-outlined">notifications</span>
-        </button>
-        <button class="text-primary hover:bg-pink-50 transition-colors p-2 rounded-full" title="Perfil">
-            <span class="material-symbols-outlined">account_circle</span>
+
+        <!-- Botón de filtros (móvil) -->
+        <button onclick="openDrawer()" class="lg:hidden shrink-0 flex items-center gap-1.5 bg-primary text-on-primary rounded-full px-3.5 py-2.5 text-sm font-semibold shadow-sm active:scale-95 transition-transform" title="Filtros">
+            <span class="material-symbols-outlined" style="font-size:20px">tune</span>
+            <span class="hidden sm:inline">Filtros</span>
+            <span id="filter-badge" class="hidden bg-white text-primary text-[10px] font-bold rounded-full w-4 h-4 leading-4 text-center"></span>
         </button>
     </div>
 </header>
 
 <!-- ═══════════════════════ LAYOUT ═══════════════════════ -->
-<div class="flex flex-1 min-h-0">
+<div class="flex flex-1 min-h-0 w-full max-w-[1600px] mx-auto">
 
-    <!-- SIDEBAR -->
-    <aside class="hidden md:flex flex-col p-4 gap-6 h-[calc(100vh-64px)] w-64 border-r bg-slate-50 border-slate-200 overflow-y-auto shrink-0 sticky top-16">
-        <div>
-            <h3 class="font-label text-xs font-medium text-on-surface-variant mb-3 uppercase tracking-wider">Filtrar por Categoría</h3>
-            <nav id="category-nav" class="flex flex-col gap-1"></nav>
-        </div>
-        <hr class="border-outline-variant/30">
-        <div>
-            <h3 class="font-label text-xs font-medium text-on-surface-variant mb-3 uppercase tracking-wider">Filtrar por Precio</h3>
-            <div class="px-1">
-                <input id="price-range" type="range" min="0" max="100" value="100" class="w-full" oninput="handlePriceFilter(this.value)">
-                <div class="flex justify-between text-xs text-outline mt-2 font-label">
-                    <span>S/ 0</span>
-                    <span id="price-display">S/ 0+</span>
-                </div>
-            </div>
-        </div>
-        <hr class="border-outline-variant/30">
-        <div>
-            <h3 class="font-label text-xs font-medium text-on-surface-variant mb-3 uppercase tracking-wider">Filtrar por Marca</h3>
-            <div id="brand-filter" class="flex flex-col gap-2"></div>
-        </div>
+    <!-- SIDEBAR (desktop) -->
+    <aside class="hidden lg:flex flex-col p-5 gap-6 w-64 shrink-0 sticky top-16 h-[calc(100vh-64px)] overflow-y-auto">
+        <div id="sidebar-content"></div>
     </aside>
 
     <!-- MAIN CONTENT -->
-    <main class="flex-1 overflow-y-auto p-8 bg-background">
-        <div class="flex justify-between items-end mb-2">
+    <main class="flex-1 min-w-0 px-4 sm:px-6 lg:pr-8 py-6">
+        <!-- Título + estado de sincronización -->
+        <div class="mb-5 flex flex-wrap items-end justify-between gap-3">
             <div>
-                <h1 id="section-title" class="font-headline text-4xl font-black text-on-surface" style="line-height:1.15">Catálogo Interno</h1>
-                <p id="section-subtitle" class="text-on-surface-variant text-sm mt-1">Consulta rápida de precios · Papelería</p>
+                <h1 id="section-title" class="font-headline text-3xl sm:text-4xl font-black text-on-surface" style="line-height:1.1">Catálogo de precios</h1>
+                <p id="section-subtitle" class="text-on-surface-variant text-sm mt-1.5">Consulta rápida · Librería y útiles</p>
             </div>
+            <button id="refresh-btn" onclick="syncProducts(true)" title="Actualizar precios desde la hoja"
+                    class="flex items-center gap-1.5 text-xs font-medium text-outline hover:text-primary border border-outline-variant/60 hover:border-primary rounded-full px-3 py-1.5 transition-colors">
+                <span id="sync-icon" class="material-symbols-outlined" style="font-size:16px">sync</span>
+                <span id="sync-text">Actualizar</span>
+            </button>
         </div>
-        <p id="results-count" class="font-label text-xs text-outline-variant mb-6 h-4"></p>
-        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+
+        <!-- Chips de categoría -->
+        <div class="mb-5 -mx-4 sm:mx-0 px-4 sm:px-0">
+            <div id="category-chips" class="flex gap-2 overflow-x-auto no-scrollbar pb-1"></div>
+        </div>
+
+        <p id="results-count" class="font-label text-xs text-outline mb-4 h-4"></p>
+
+        <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5"></div>
+
+        <!-- Estado: cargando -->
+        <div id="loading-state" class="flex flex-col items-center justify-center py-24 text-center">
+            <span class="material-symbols-outlined text-primary spin mb-3" style="font-size:40px">progress_activity</span>
+            <p class="text-sm text-on-surface-variant">Cargando catálogo desde la hoja…</p>
+        </div>
+
+        <!-- Estado: sin resultados -->
         <div id="empty-state" class="hidden flex-col items-center justify-center py-24 text-center">
-            <div class="w-20 h-20 bg-primary-container/30 rounded-full flex items-center justify-center mb-4">
-                <span class="material-symbols-outlined text-primary/40" style="font-size:40px">search_off</span>
+            <div class="w-20 h-20 bg-primary-container/40 rounded-full flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-primary/50" style="font-size:40px">search_off</span>
             </div>
             <h3 class="font-headline text-lg font-bold text-on-surface mb-1">Sin resultados</h3>
-            <p class="text-sm text-on-surface-variant">Prueba con otros filtros.</p>
+            <p class="text-sm text-on-surface-variant mb-4">No encontramos productos con esos filtros.</p>
+            <button onclick="resetFilters()" class="text-sm font-semibold text-primary hover:underline">Limpiar filtros</button>
+        </div>
+
+        <!-- Estado: error de carga -->
+        <div id="error-state" class="hidden flex-col items-center justify-center py-24 text-center">
+            <div class="w-20 h-20 bg-error-container rounded-full flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-error" style="font-size:40px">cloud_off</span>
+            </div>
+            <h3 class="font-headline text-lg font-bold text-on-surface mb-1">No se pudo cargar el catálogo</h3>
+            <p class="text-sm text-on-surface-variant mb-4 max-w-xs">Revisa la conexión a internet o que la hoja de Google siga compartida.</p>
+            <button onclick="syncProducts(true)" class="text-sm font-semibold text-on-primary bg-primary rounded-full px-4 py-2">Reintentar</button>
         </div>
     </main>
 </div>
 
+<!-- ═══════════════════════ DRAWER DE FILTROS (móvil) ═══════════════════════ -->
+<div id="filter-backdrop" onclick="closeDrawer()" class="hidden opacity-0 fixed inset-0 bg-black/40 z-50 lg:hidden"></div>
+<aside id="filter-drawer" class="fixed top-0 right-0 h-full w-[85%] max-w-xs bg-surface-container-lowest z-50 translate-x-full shadow-2xl lg:hidden flex flex-col">
+    <div class="flex items-center justify-between px-5 h-16 border-b border-outline-variant/40 shrink-0">
+        <span class="font-headline font-bold text-lg text-on-surface">Filtros</span>
+        <button onclick="closeDrawer()" class="text-outline hover:text-primary p-2 -mr-2 rounded-full">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+        <div id="drawer-content"></div>
+    </div>
+    <div class="p-4 border-t border-outline-variant/40 shrink-0 flex gap-3">
+        <button onclick="resetFilters()" class="flex-1 py-3 rounded-full border-2 border-outline-variant text-on-surface-variant font-semibold text-sm">Limpiar</button>
+        <button onclick="closeDrawer()" class="flex-1 py-3 rounded-full bg-primary text-on-primary font-semibold text-sm">Ver resultados</button>
+    </div>
+</aside>
+
 <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
-<footer class="flex justify-between items-center py-5 px-8 bg-white border-t border-slate-100">
-    <span class="font-headline text-xs text-slate-400">© 2025 D'Cecis Catálogo Interno. Todos los derechos reservados.</span>
-    <span class="font-label text-xs text-slate-400"><span id="footer-count">0</span> productos registrados</span>
+<footer class="mt-8 py-6 px-4 sm:px-6 bg-surface-container-lowest border-t border-outline-variant/40">
+    <div class="max-w-[1600px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center">
+        <span class="font-headline text-xs text-outline">© <span id="year"></span> D'Cecis · Catálogo de precios</span>
+        <span class="font-label text-xs text-outline"><span id="footer-count">0</span> productos · datos desde Google Sheets</span>
+    </div>
 </footer>
 
 <script>
 // ═══════════════════════════════════════════════════════════════════════════════
 //
-//   CATÁLOGO DE PRODUCTOS D'CECIS
-//   ─────────────────────────────
-//   Para actualizar precios o agregar productos, editar el array PRODUCTOS
-//   y subir los cambios a GitHub. Todos verán la actualización al recargar.
+//   CATÁLOGO DE PRECIOS · D'CECIS
+//   ──────────────────────────────
+//   Los productos se leen EN VIVO desde tu Google Sheet.
+//   Para cambiar precios o agregar productos: edita la hoja de Google y listo;
+//   la web se actualiza sola (los usuarios verán el cambio al recargar o al
+//   tocar el botón "Actualizar").
 //
-//   Campos por producto:
-//     nombre      → nombre visible del producto
-//     categoria   → 'Cuadernos' | 'Escritura' | 'Papelería' | 'Arte' | 'Decoración'
-//                   (para sección Otros: 'Bebidas' | 'Snacks' | etc.)
-//     marca       → nombre de la marca
-//     precio      → número en soles, ej: 8.50
-//     sku         → código interno, ej: 'CC-01' (opcional)
-//     stock       → 'en-stock' | 'poco-stock' | 'sin-stock'
-//     imagen      → URL de la imagen (dejar '' si no tiene)
-//     descripcion → texto corto descriptivo (opcional)
+//   COLUMNAS QUE LEE LA HOJA (el orden no importa, se buscan por nombre):
+//     Nombre del producto  → título del producto        (obligatorio)
+//     Nombre comercial     → nombre/variante comercial  (opcional)
+//     Marca                → marca. Vacío o "Genérica" ⇒ se muestra "Genérico"
+//     Categoria            → agrupa y filtra los productos
+//     Medida               → unidad, ej: und, docena, ciento (opcional)
+//     Precio               → número en soles, ej: 1.20
+//   COLUMNAS OPCIONALES que puedes AGREGAR luego:
+//     Imagen               → nombre del archivo de foto, ej: tiza.jpg
+//                            (se busca en assets/fotos/). También acepta URL http.
+//     Stock                → en stock | poco stock | agotado
+//     Sección              → "otros" para mandarlo a la pestaña Otros
 //
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const PRODUCTOS = [
+// ─── Fuente de datos (tu hoja de Google) ─────────────────────────────────────
+const SHEET_ID   = '1N-kR9IZMZaKt880CvRsldcwZXfKkdpv8fghl9k3amPI';
+const SHEET_NAME = 'Lista de productos';
+const SHEET_URL  = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`;
+const CACHE_KEY  = 'dcecis_productos_v2';
 
-    // ── CUADERNOS ─────────────────────────────────────────────────────────────
-    {
-        nombre:      'Cuaderno Espiral Pastel A5',
-        categoria:   'Cuadernos',
-        marca:       'Miquelrius',
-        precio:      8.50,
-        sku:         'CC-01',
-        stock:       'en-stock',
-        imagen:      '',
-        descripcion: 'Tapa dura, 120 hojas cuadriculadas',
-    },
-    {
-        nombre:      'Bloc Post-it 3×3" (90h)',
-        categoria:   'Cuadernos',
-        marca:       'Post-it',
-        precio:      7.50,
-        sku:         'BN-33',
-        stock:       'en-stock',
-        imagen:      '',
-        descripcion: 'Autoadhesivo, 90 hojas amarillas',
-    },
+// Categorías que van a la pestaña "Otros" (consumibles). El resto = "Librería".
+const CATS_OTROS = new Set(['otros','bebidas','snacks','golosinas','dulces','abarrotes','comida','gaseosas','piqueos','helados']);
 
-    // ── ESCRITURA ─────────────────────────────────────────────────────────────
-    {
-        nombre:      'Set de Marcadores Punta Fina (12u)',
-        categoria:   'Escritura',
-        marca:       'Faber-Castell',
-        precio:      15.00,
-        sku:         'MA-12',
-        stock:       'en-stock',
-        imagen:      '',
-        descripcion: '12 colores vivos, punta fina 0.4mm',
-    },
-    {
-        nombre:      'Bolígrafos Azul BIC (x10)',
-        categoria:   'Escritura',
-        marca:       'Bic',
-        precio:      5.00,
-        sku:         'BP-B10',
-        stock:       'en-stock',
-        imagen:      '',
-        descripcion: 'Pack de 10 bolígrafos punta media',
-    },
-    {
-        nombre:      'Corrector Líquido 20ml',
-        categoria:   'Escritura',
-        marca:       'Bic',
-        precio:      3.50,
-        sku:         'CL-20',
-        stock:       'poco-stock',
-        imagen:      '',
-        descripcion: 'Secado rápido, punta metálica',
-    },
-    {
-        nombre:      'Resaltadores Pastel (x5)',
-        categoria:   'Escritura',
-        marca:       'Pilot',
-        precio:      8.00,
-        sku:         'RS-P5',
-        stock:       'en-stock',
-        imagen:      '',
-        descripcion: '5 colores pasteles suaves',
-    },
-
-    // ── PAPELERÍA ─────────────────────────────────────────────────────────────
-    {
-        nombre:      'Tijeras Escolar 17cm',
-        categoria:   'Papelería',
-        marca:       'Maped',
-        precio:      4.50,
-        sku:         'TJ-17',
-        stock:       'en-stock',
-        imagen:      '',
-        descripcion: 'Punta redondeada, mango ergonómico',
-    },
-    {
-        nombre:      'Regla 30cm Transparente',
-        categoria:   'Papelería',
-        marca:       'Maped',
-        precio:      2.50,
-        sku:         'RG-30',
-        stock:       'en-stock',
-        imagen:      '',
-        descripcion: 'Escala milimétrica, borde biselado',
-    },
-    {
-        nombre:      'Papel Bond A4 75g (500h)',
-        categoria:   'Papelería',
-        marca:       'Navigator',
-        precio:      22.00,
-        sku:         'PB-A4',
-        stock:       'en-stock',
-        imagen:      '',
-        descripcion: 'Resma 500 hojas blancas',
-    },
-    {
-        nombre:      'Pegamento en Barra 21g',
-        categoria:   'Papelería',
-        marca:       'UHU',
-        precio:      3.00,
-        sku:         'PG-21',
-        stock:       'sin-stock',
-        imagen:      '',
-        descripcion: 'Sin mancha, lavable',
-    },
-    {
-        nombre:      'Compás Escolar de Metal',
-        categoria:   'Papelería',
-        marca:       'Maped',
-        precio:      9.50,
-        sku:         'CP-01',
-        stock:       'en-stock',
-        imagen:      '',
-        descripcion: 'Compás con adaptador universal',
-    },
-
-    // ── ARTE ──────────────────────────────────────────────────────────────────
-    {
-        nombre:      'Lápices de Colores Acuarelables (24u)',
-        categoria:   'Arte',
-        marca:       'Faber-Castell',
-        precio:      25.00,
-        sku:         'LC-24',
-        stock:       'en-stock',
-        imagen:      '',
-        descripcion: '24 lápices con efecto acuarela',
-    },
-    {
-        nombre:      'Cartulina de Colores A3 (x10)',
-        categoria:   'Arte',
-        marca:       'Artesco',
-        precio:      4.00,
-        sku:         'CA-A3',
-        stock:       'en-stock',
-        imagen:      '',
-        descripcion: '10 cartulinas de colores surtidos',
-    },
-    {
-        nombre:      'Set de Acuarelas 24 Colores',
-        categoria:   'Arte',
-        marca:       'Maped',
-        precio:      18.00,
-        sku:         'AC-24',
-        stock:       'poco-stock',
-        imagen:      '',
-        descripcion: 'Caja metálica, colores vibrantes',
-    },
-
-    // ── DECORACIÓN ────────────────────────────────────────────────────────────
-    {
-        nombre:      'Pack Washi Tape Geométrico (3u)',
-        categoria:   'Decoración',
-        marca:       'Kokuyo',
-        precio:      6.50,
-        sku:         'WT-03',
-        stock:       'poco-stock',
-        imagen:      '',
-        descripcion: '3 rollos con diseños geométricos pasteles',
-    },
-
-    // ── BEBIDAS (sección Otros) ────────────────────────────────────────────────
-    {
-        nombre:      'Gaseosa Inca Kola 500ml',
-        categoria:   'Bebidas',
-        marca:       'Inca Kola',
-        precio:      2.50,
-        sku:         'GAS-01',
-        stock:       'en-stock',
-        imagen:      '',
-        descripcion: 'Botella personal',
-    },
-    {
-        nombre:      'Gaseosa Coca-Cola 500ml',
-        categoria:   'Bebidas',
-        marca:       'Coca-Cola',
-        precio:      2.50,
-        sku:         'GAS-02',
-        stock:       'en-stock',
-        imagen:      '',
-        descripcion: 'Botella personal',
-    },
-    {
-        nombre:      'Agua San Luis 625ml',
-        categoria:   'Bebidas',
-        marca:       'San Luis',
-        precio:      1.50,
-        sku:         'AGU-01',
-        stock:       'en-stock',
-        imagen:      '',
-        descripcion: 'Agua sin gas, botella mediana',
-    },
-
-];
-
-// ═══════════════════════════════════════════════════════════════════════════════
-//  Configuración de categorías (ícono + color de fondo de tarjeta)
-// ═══════════════════════════════════════════════════════════════════════════════
-
+// Ícono + color de fondo por categoría (las no listadas usan un estilo neutro)
 const CAT_CONFIG = {
-    'Cuadernos':  { icon: 'menu_book',    bg: 'bg-pink-100'   },
-    'Escritura':  { icon: 'edit',         bg: 'bg-blue-100'   },
-    'Papelería':  { icon: 'auto_stories', bg: 'bg-violet-100' },
-    'Arte':       { icon: 'palette',      bg: 'bg-amber-100'  },
-    'Decoración': { icon: 'favorite',     bg: 'bg-green-100'  },
-    'Bebidas':    { icon: 'local_cafe',   bg: 'bg-orange-100' },
-    'Snacks':     { icon: 'bakery_dining',bg: 'bg-lime-100'   },
+    'Librería':   { icon: 'auto_stories',  bg: 'bg-violet-100' },
+    'Papelería':  { icon: 'auto_stories',  bg: 'bg-violet-100' },
+    'Cuadernos':  { icon: 'menu_book',     bg: 'bg-pink-100'   },
+    'Escritura':  { icon: 'edit',          bg: 'bg-blue-100'   },
+    'Arte':       { icon: 'palette',       bg: 'bg-amber-100'  },
+    'Oficina':    { icon: 'business_center', bg: 'bg-slate-100'},
+    'Escolar':    { icon: 'backpack',      bg: 'bg-sky-100'    },
+    'Regalos':    { icon: 'featured_seasonal_and_gifts', bg: 'bg-rose-100' },
+    'Decoración': { icon: 'favorite',      bg: 'bg-emerald-100'},
+    'Bebidas':    { icon: 'local_cafe',    bg: 'bg-sky-100'    },
+    'Snacks':     { icon: 'bakery_dining', bg: 'bg-lime-100'   },
+    'Golosinas':  { icon: 'cookie',        bg: 'bg-fuchsia-100'},
 };
-const DEFAULT_CAT = { icon: 'inventory_2', bg: 'bg-slate-100' };
+const DEFAULT_CAT   = { icon: 'inventory_2', bg: 'bg-slate-100' };
+const MARCA_DEFECTO = 'Genérico';
 
-const PAPELERIA_CATS = new Set(['Cuadernos','Escritura','Papelería','Arte','Decoración']);
+// ─── Datos (se llenan desde caché / hoja) ────────────────────────────────────
+let PRODUCTOS = [];
 
-// ─── Estado de la app ─────────────────────────────────────────────────────────
+// ─── Estado de la interfaz ───────────────────────────────────────────────────
 let currentSection  = 'papeleria';
 let activeCategory  = 'all';
 let searchQuery     = '';
 let maxPricePercent = 100;
 let selectedBrands  = new Set();
 
-// ─── Cambio de sección ────────────────────────────────────────────────────────
-function switchSection(section) {
-    currentSection  = section;
-    activeCategory  = 'all';
-    searchQuery     = '';
-    maxPricePercent = 100;
-    selectedBrands  = new Set();
-    document.getElementById('search-input').value = '';
-    document.getElementById('price-range').value  = 100;
+// ─── Utilidades ──────────────────────────────────────────────────────────────
+const norm = s => (s == null ? '' : String(s)).trim().toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
+const esc  = s => (s == null ? '' : String(s)).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmtPrice = n => `S/ ${(Number(n) || 0).toFixed(2)}`;
+const catCfg = cat => CAT_CONFIG[cat] || _catByNorm[norm(cat)] || DEFAULT_CAT;
+const _catByNorm = {}; Object.entries(CAT_CONFIG).forEach(([k, v]) => _catByNorm[norm(k)] = v);
 
-    document.querySelectorAll('.nav-tab').forEach(t => {
-        t.classList.remove('text-primary','border-b-2','border-primary','font-bold');
-        t.classList.add('text-slate-500','font-medium');
-    });
-    const active = document.getElementById('nav-' + section);
-    if (active) {
-        active.classList.add('text-primary','border-b-2','border-primary','font-bold');
-        active.classList.remove('text-slate-500','font-medium');
-    }
+function marcaDe(p) {
+    const m = (p.marca || '').trim();
+    if (!m) return MARCA_DEFECTO;
+    if (/^gener/.test(norm(m))) return MARCA_DEFECTO;   // "Genérica", "Generico", etc.
+    return m;
+}
+function esOtros(p) {
+    const s = norm(p.seccion);
+    if (s === 'otros') return true;
+    if (s === 'papeleria' || s === 'libreria' || s === 'principal') return false;
+    return CATS_OTROS.has(norm(p.categoria));
+}
 
-    if (section === 'otros') {
-        document.getElementById('section-title').textContent    = 'Otros Productos';
-        document.getElementById('section-subtitle').textContent = 'Bebidas, snacks y otros artículos';
-    } else {
-        document.getElementById('section-title').textContent    = 'Catálogo Interno';
-        document.getElementById('section-subtitle').textContent = 'Consulta rápida de precios · Papelería';
+// ─── Lectura de la hoja (CSV) ────────────────────────────────────────────────
+function parseCSV(text) {
+    const rows = []; let row = [], field = '', inQ = false;
+    for (let i = 0; i < text.length; i++) {
+        const c = text[i];
+        if (inQ) {
+            if (c === '"') { if (text[i + 1] === '"') { field += '"'; i++; } else inQ = false; }
+            else field += c;
+        } else {
+            if (c === '"') inQ = true;
+            else if (c === ',') { row.push(field); field = ''; }
+            else if (c === '\n') { row.push(field); rows.push(row); row = []; field = ''; }
+            else if (c !== '\r') field += c;
+        }
     }
-    buildSidebar();
+    if (field.length || row.length) { row.push(field); rows.push(row); }
+    return rows;
+}
+
+function mapStock(v) {
+    const n = norm(v);
+    if (!n) return 'en-stock';
+    if (n.includes('agot') || n.includes('sin')) return 'sin-stock';
+    if (n.includes('poco') || n.includes('bajo')) return 'poco-stock';
+    return 'en-stock';
+}
+
+function rowsToProductos(rows) {
+    if (!rows.length) return [];
+    const H = rows[0].map(norm);
+    const col = (...names) => H.findIndex(h => names.some(n => h === n));
+    const iNombre    = col('nombre del producto', 'producto', 'nombre');
+    const iComercial = col('nombre comercial', 'comercial');
+    const iMarca     = col('marca');
+    const iCat       = col('categoria', 'categoría');
+    const iMedida    = col('medida', 'unidad');
+    const iPrecio    = col('precio', 'precio venta', 'precio (s/)', 'precio s/');
+    const iImagen    = col('imagen', 'foto', 'imagen url', 'url foto');
+    const iStock     = col('stock', 'disponibilidad');
+    const iSeccion   = col('seccion', 'sección');
+    const iSku       = col('sku', 'codigo', 'código');
+    const cell = (row, i) => (i >= 0 && row[i] != null) ? String(row[i]).trim() : '';
+
+    const out = [];
+    for (let r = 1; r < rows.length; r++) {
+        const row = rows[r];
+        const nombre = cell(row, iNombre);
+        if (!nombre) continue;                        // ignora filas vacías
+        const precio = parseFloat(cell(row, iPrecio).replace(',', '.').replace(/[^0-9.]/g, ''));
+        let imagen = cell(row, iImagen);
+        if (imagen && !/^https?:\/\//i.test(imagen) && !imagen.startsWith('assets/')) imagen = 'assets/fotos/' + imagen;
+        out.push({
+            nombre,
+            comercial:   cell(row, iComercial),
+            marca:       cell(row, iMarca),
+            categoria:   cell(row, iCat) || 'Otros',
+            medida:      cell(row, iMedida),
+            precio:      isNaN(precio) ? 0 : precio,
+            imagen,
+            stock:       iStock >= 0 ? mapStock(cell(row, iStock)) : 'en-stock',
+            seccion:     cell(row, iSeccion),
+            sku:         cell(row, iSku),
+        });
+    }
+    return out;
+}
+
+async function fetchSheet() {
+    const res = await fetch(SHEET_URL + '&_=' + Date.now(), { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const prods = rowsToProductos(parseCSV(await res.text()));
+    if (!prods.length) throw new Error('La hoja no tiene productos.');
+    return prods;
+}
+
+function loadCache() {
+    try { const c = JSON.parse(localStorage.getItem(CACHE_KEY)); return (c && Array.isArray(c.data) && c.data.length) ? c : null; }
+    catch (e) { return null; }
+}
+function saveCache(data) {
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), data })); } catch (e) {}
+}
+
+function tiempoRelativo(ts) {
+    const s = Math.round((Date.now() - ts) / 1000);
+    if (s < 60) return 'hace un momento';
+    const m = Math.round(s / 60); if (m < 60) return `hace ${m} min`;
+    const h = Math.round(m / 60); if (h < 24) return `hace ${h} h`;
+    return new Date(ts).toLocaleDateString('es-PE');
+}
+
+// ─── Sincronización ──────────────────────────────────────────────────────────
+function setSyncStatus(state, ts) {
+    const icon = document.getElementById('sync-icon');
+    const text = document.getElementById('sync-text');
+    icon.classList.toggle('spin', state === 'loading');
+    if (state === 'loading') { icon.textContent = 'progress_activity'; text.textContent = 'Actualizando…'; }
+    else if (state === 'ok') { icon.textContent = 'cloud_done'; text.textContent = 'Actualizado ' + tiempoRelativo(ts); }
+    else if (state === 'offline') { icon.textContent = 'cloud_off'; text.textContent = 'Última copia'; }
+    else { icon.textContent = 'sync'; text.textContent = 'Actualizar'; }
+}
+
+function afterDataChange() {
+    document.getElementById('footer-count').textContent = PRODUCTOS.length;
+    buildFilters();
     render();
 }
 
-// ─── Productos de la sección activa ───────────────────────────────────────────
-function sectionProducts() {
-    return currentSection === 'otros'
-        ? PRODUCTOS.filter(p => !PAPELERIA_CATS.has(p.categoria))
-        : PRODUCTOS.filter(p =>  PAPELERIA_CATS.has(p.categoria));
+async function syncProducts(manual) {
+    setSyncStatus('loading');
+    if (!PRODUCTOS.length) showView('loading');
+    try {
+        PRODUCTOS = await fetchSheet();
+        saveCache(PRODUCTOS);
+        if (activeCategory !== 'all' && !PRODUCTOS.some(p => p.categoria === activeCategory)) activeCategory = 'all';
+        afterDataChange();
+        setSyncStatus('ok', Date.now());
+    } catch (e) {
+        const c = loadCache();
+        if (c) { PRODUCTOS = c.data; afterDataChange(); setSyncStatus('offline', c.t); }
+        else { showView('error'); setSyncStatus('idle'); }
+    }
 }
 
-// ─── Filtrado ─────────────────────────────────────────────────────────────────
+// ─── Vistas (cargando / grid / vacío / error) ────────────────────────────────
+function showView(v) {
+    document.getElementById('product-grid').classList.toggle('hidden', v !== 'grid');
+    [['loading-state','loading'],['empty-state','empty'],['error-state','error']].forEach(([id, key]) => {
+        const el = document.getElementById(id);
+        const show = key === v;
+        el.classList.toggle('hidden', !show);
+        el.classList.toggle('flex', show);
+    });
+    document.getElementById('results-count').style.visibility = (v === 'grid') ? 'visible' : 'hidden';
+}
+
+// ─── Productos de la sección activa ──────────────────────────────────────────
+function sectionProducts() {
+    return currentSection === 'otros' ? PRODUCTOS.filter(esOtros) : PRODUCTOS.filter(p => !esOtros(p));
+}
 function maxPriceInSection() {
     const sp = sectionProducts();
     return sp.length ? Math.ceil(Math.max(...sp.map(p => p.precio))) : 100;
 }
-
+function activeFilterCount() {
+    let n = 0;
+    if (activeCategory !== 'all') n++;
+    if (maxPricePercent < 100) n++;
+    n += selectedBrands.size;
+    return n;
+}
 function filteredProducts() {
     const maxP  = maxPriceInSection();
     const limit = maxPricePercent >= 100 ? Infinity : (maxPricePercent / 100) * maxP;
-    const q     = searchQuery.toLowerCase();
+    const q     = norm(searchQuery);
     return sectionProducts().filter(p => {
-        if (q && ![p.nombre, p.marca, p.categoria, p.sku || ''].some(s => s.toLowerCase().includes(q))) return false;
+        if (q && ![p.nombre, p.comercial, marcaDe(p), p.categoria, p.sku].some(s => norm(s).includes(q))) return false;
         if (activeCategory !== 'all' && p.categoria !== activeCategory) return false;
         if (p.precio > limit) return false;
-        if (selectedBrands.size > 0 && !selectedBrands.has(p.marca)) return false;
+        if (selectedBrands.size > 0 && !selectedBrands.has(marcaDe(p))) return false;
         return true;
     });
 }
 
-function handleSearch(v) { searchQuery = v; render(); }
+// ─── Handlers ────────────────────────────────────────────────────────────────
+function handleSearch(v) {
+    searchQuery = v;
+    document.getElementById('search-clear').classList.toggle('hidden', !v);
+    render();
+}
+function clearSearch() {
+    searchQuery = '';
+    document.getElementById('search-input').value = '';
+    document.getElementById('search-clear').classList.add('hidden');
+    render();
+}
 function handlePriceFilter(v) {
     maxPricePercent = parseInt(v);
     const maxP = maxPriceInSection();
-    document.getElementById('price-display').textContent =
-        maxPricePercent >= 100 ? `S/ ${maxP}+` : `S/ ${Math.round((maxPricePercent / 100) * maxP)}`;
+    const label = maxPricePercent >= 100 ? `S/ ${maxP}+` : `Hasta ${fmtPrice((maxPricePercent / 100) * maxP)}`;
+    document.querySelectorAll('.price-display').forEach(el => el.textContent = label);
     render();
 }
 function handleBrandToggle(b) {
@@ -489,120 +527,206 @@ function handleBrandToggle(b) {
     render();
 }
 function setCategory(cat) {
-    activeCategory = cat;
-    document.querySelectorAll('.cat-link').forEach(l => l.classList.remove('active'));
-    const el = document.querySelector(`.cat-link[data-cat="${CSS.escape(cat)}"]`);
-    if (el) el.classList.add('active');
+    activeCategory = (activeCategory === cat && cat !== 'all') ? 'all' : cat;
     render();
 }
+function resetFilters() {
+    activeCategory  = 'all';
+    maxPricePercent = 100;
+    selectedBrands  = new Set();
+    buildFilters();
+    render();
+}
+function resetAll() { clearSearch(); resetFilters(); }
 
-// ─── Sidebar ──────────────────────────────────────────────────────────────────
-function buildSidebar() {
-    const sp = sectionProducts();
-    const cats = ['all', ...[...new Set(sp.map(p => p.categoria))]];
-    document.getElementById('category-nav').innerHTML = cats.map(cat => {
-        const cfg   = cat === 'all' ? { icon: 'grid_view' } : (CAT_CONFIG[cat] || DEFAULT_CAT);
-        const label = cat === 'all' ? 'Catálogo' : cat;
+// ─── Cambio de sección ───────────────────────────────────────────────────────
+function switchSection(section) {
+    if (section === currentSection) return;
+    currentSection = section;
+    resetFilters();
+    clearSearch();
+    document.querySelectorAll('.nav-tab').forEach(t => {
+        t.classList.remove('text-primary','font-bold'); t.classList.add('text-slate-500','font-medium');
+    });
+    const active = document.getElementById('nav-' + section);
+    if (active) { active.classList.add('text-primary','font-bold'); active.classList.remove('text-slate-500','font-medium'); }
+    if (section === 'otros') {
+        document.getElementById('section-title').textContent    = 'Otros productos';
+        document.getElementById('section-subtitle').textContent = 'Bebidas, snacks y golosinas';
+    } else {
+        document.getElementById('section-title').textContent    = 'Catálogo de precios';
+        document.getElementById('section-subtitle').textContent = 'Consulta rápida · Librería y útiles';
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ─── Construcción de filtros ─────────────────────────────────────────────────
+function filtersHTML() {
+    const sp     = sectionProducts();
+    const cats   = [...new Set(sp.map(p => p.categoria))].sort((a, b) => a.localeCompare(b));
+    const brands = [...new Set(sp.map(marcaDe))].sort((a, b) => a === MARCA_DEFECTO ? 1 : b === MARCA_DEFECTO ? -1 : a.localeCompare(b));
+    const maxP   = maxPriceInSection();
+    const priceLabel = maxPricePercent >= 100 ? `S/ ${maxP}+` : `Hasta ${fmtPrice((maxPricePercent / 100) * maxP)}`;
+
+    const catLinks = ['all', ...cats].map(cat => {
+        const cfg   = cat === 'all' ? { icon: 'grid_view' } : catCfg(cat);
+        const label = cat === 'all' ? 'Todo el catálogo' : cat;
         const count = cat === 'all' ? sp.length : sp.filter(p => p.categoria === cat).length;
-        return `
-        <a href="#" onclick="setCategory('${cat}'); return false;" data-cat="${cat}"
-           class="cat-link flex items-center gap-3 p-2 text-slate-600 hover:bg-slate-100 rounded-lg text-sm font-headline ${activeCategory === cat ? 'active' : ''}">
+        return `<a href="#" data-cat="${esc(cat)}" onclick="setCategory(this.dataset.cat); return false;"
+           class="cat-link flex items-center gap-3 p-2.5 text-slate-600 hover:bg-primary-container/25 rounded-xl text-sm font-headline font-medium ${activeCategory === cat ? 'active' : ''}">
             <span class="material-symbols-outlined" style="font-size:20px">${cfg.icon}</span>
-            <span class="flex-1">${label}</span>
-            <span class="font-label text-xs text-outline-variant">${count}</span>
+            <span class="flex-1">${esc(label)}</span>
+            <span class="cat-count font-label text-xs text-outline">${count}</span>
         </a>`;
     }).join('');
 
-    const brands = [...new Set(sp.map(p => p.marca))].sort();
-    document.getElementById('brand-filter').innerHTML = brands.map(b => `
-        <label class="flex items-center gap-3 cursor-pointer group">
-            <input type="checkbox" ${selectedBrands.has(b) ? 'checked' : ''}
-                   onchange="handleBrandToggle('${b}')"
-                   class="rounded border-outline-variant w-4 h-4 cursor-pointer accent-primary">
-            <span class="text-sm text-on-surface group-hover:text-primary transition-colors">${b}</span>
+    const brandChecks = brands.map(b => `
+        <label class="flex items-center gap-3 cursor-pointer group py-0.5">
+            <input type="checkbox" ${selectedBrands.has(b) ? 'checked' : ''} data-brand="${esc(b)}" onchange="handleBrandToggle(this.dataset.brand)"
+                   class="rounded border-outline-variant w-4 h-4 cursor-pointer accent-primary shrink-0">
+            <span class="text-sm text-on-surface group-hover:text-primary transition-colors ${b === MARCA_DEFECTO ? 'italic text-outline' : ''}">${esc(b)}</span>
         </label>`).join('');
 
-    const maxP = maxPriceInSection();
-    document.getElementById('price-display').textContent = `S/ ${maxP}+`;
-    document.getElementById('price-range').value = 100;
-    maxPricePercent = 100;
+    return `
+        <div class="mb-6">
+            <h3 class="font-label text-xs font-semibold text-on-surface-variant mb-3 uppercase tracking-wider">Categoría</h3>
+            <nav class="flex flex-col gap-1">${catLinks}</nav>
+        </div>
+        <hr class="border-outline-variant/40 mb-6">
+        <div class="mb-6">
+            <h3 class="font-label text-xs font-semibold text-on-surface-variant mb-3 uppercase tracking-wider">Precio</h3>
+            <input type="range" min="0" max="100" value="${maxPricePercent}" class="w-full" oninput="handlePriceFilter(this.value)">
+            <div class="flex justify-between text-xs text-outline mt-2 font-label">
+                <span>S/ 0</span>
+                <span class="price-display font-semibold text-on-surface-variant">${priceLabel}</span>
+            </div>
+        </div>
+        <hr class="border-outline-variant/40 mb-6">
+        <div>
+            <h3 class="font-label text-xs font-semibold text-on-surface-variant mb-3 uppercase tracking-wider">Marca</h3>
+            <div class="flex flex-col gap-1.5">${brandChecks || '<span class="text-xs text-outline">—</span>'}</div>
+        </div>`;
 }
 
-// ─── Badges y helpers ─────────────────────────────────────────────────────────
-function fmtPrice(p) { return `S/ ${p.toFixed(2).replace('.', ',')}` }
+function chipsHTML() {
+    const sp   = sectionProducts();
+    const cats = [...new Set(sp.map(p => p.categoria))].sort((a, b) => a.localeCompare(b));
+    return ['all', ...cats].map(cat => {
+        const label = cat === 'all' ? 'Todo' : cat;
+        const cfg   = cat === 'all' ? { icon: 'grid_view' } : catCfg(cat);
+        return `<button data-chip="${esc(cat)}" onclick="setCategory(this.dataset.chip)"
+            class="chip shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-outline-variant/60 bg-surface-container-lowest text-sm font-medium text-on-surface-variant ${activeCategory === cat ? 'active' : ''}">
+            <span class="material-symbols-outlined" style="font-size:17px">${cfg.icon}</span>${esc(label)}</button>`;
+    }).join('');
+}
 
+function buildFilters() {
+    document.getElementById('sidebar-content').innerHTML = filtersHTML();
+    document.getElementById('drawer-content').innerHTML  = filtersHTML();
+    document.getElementById('category-chips').innerHTML  = chipsHTML();
+}
+
+// ─── Tarjeta de producto ─────────────────────────────────────────────────────
 function stockBadge(stock) {
-    if (stock === 'en-stock')   return `<div class="absolute top-2 left-2 z-10 bg-tertiary-container/90 text-on-tertiary-container font-label text-[10px] px-2 py-0.5 rounded-sm uppercase border border-tertiary-fixed/50 shadow-sm -rotate-1" style="letter-spacing:.05em">En Stock</div>`;
-    if (stock === 'poco-stock') return `<div class="absolute top-2 left-2 z-10 bg-error-container/90 text-on-error-container font-label text-[10px] px-2 py-0.5 rounded-sm uppercase border border-error-container/60 shadow-sm rotate-1" style="letter-spacing:.05em">Poco Stock</div>`;
-    if (stock === 'sin-stock')  return `<div class="absolute top-2 left-2 z-10 bg-surface-container-high text-on-surface-variant font-label text-[10px] px-2 py-0.5 rounded-sm uppercase border border-outline-variant/40 shadow-sm" style="letter-spacing:.05em">Sin Stock</div>`;
+    if (stock === 'poco-stock') return `<span class="absolute top-2 left-2 z-10 bg-amber-200 text-amber-900 font-label text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-sm">Poco stock</span>`;
+    if (stock === 'sin-stock')  return `<span class="absolute top-2 left-2 z-10 bg-surface-container-high text-on-surface-variant font-label text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-sm">Agotado</span>`;
     return '';
 }
 
-// ─── Tarjeta de producto ──────────────────────────────────────────────────────
-function renderCard(p) {
-    const cfg  = CAT_CONFIG[p.categoria] || DEFAULT_CAT;
-    const img  = p.imagen
-        ? `<img src="${p.imagen}" alt="${p.nombre}" class="object-contain h-full w-full group-hover:scale-105 transition-transform duration-300 mix-blend-multiply" onerror="this.style.display='none'">`
-        : `<span class="material-symbols-outlined text-slate-300" style="font-size:56px">${cfg.icon}</span>`;
-    return `
-    <div class="product-card bg-white rounded-xl overflow-hidden border border-surface-variant/50 group flex flex-col relative">
-        ${stockBadge(p.stock)}
-        <div class="${cfg.bg} h-44 p-4 flex items-center justify-center relative overflow-hidden">
-            ${img}
-        </div>
-        <div class="p-4 flex flex-col flex-1 bg-surface-container-lowest">
-            <p class="font-label text-xs text-outline mb-1">${p.categoria}</p>
-            <h3 class="text-sm font-medium text-on-surface leading-snug flex-1">${p.nombre}</h3>
-            ${p.descripcion ? `<p class="text-xs text-outline-variant mt-1.5 leading-relaxed line-clamp-2">${p.descripcion}</p>` : ''}
-            <div class="flex justify-between items-end mt-3 pt-2 border-t border-surface-variant/40">
-                <span class="font-headline text-xl font-bold text-primary">${fmtPrice(p.precio)}</span>
-                <div class="text-right">
-                    <span class="font-label text-[11px] text-outline-variant block">${p.sku || '—'}</span>
-                    <span class="font-label text-[11px] text-outline-variant">${p.marca}</span>
-                </div>
-            </div>
-        </div>
-    </div>`;
+function imgFail(el, icon) {
+    const s = document.createElement('span');
+    s.className = 'material-symbols-outlined text-slate-400/70';
+    s.style.fontSize = '56px';
+    s.textContent = icon;
+    el.replaceWith(s);
 }
 
-// ─── Render principal ─────────────────────────────────────────────────────────
-function render() {
-    const fp    = filteredProducts();
-    const sp    = sectionProducts();
-    const grid  = document.getElementById('product-grid');
-    const empty = document.getElementById('empty-state');
+function renderCard(p) {
+    const cfg   = catCfg(p.categoria);
+    const marca = marcaDe(p);
+    const esGenerico = marca === MARCA_DEFECTO;
+    const sub = (p.comercial && norm(p.comercial) !== norm(p.nombre)) ? p.comercial : '';
+    const img = p.imagen
+        ? `<img src="${esc(p.imagen)}" alt="${esc(p.nombre)}" loading="lazy" class="card-img object-contain h-full w-full mix-blend-multiply" onerror="imgFail(this,'${cfg.icon}')">`
+        : `<span class="material-symbols-outlined text-slate-400/70" style="font-size:56px">${cfg.icon}</span>`;
+    return `
+    <article class="product-card bg-surface-container-lowest rounded-2xl overflow-hidden border border-outline-variant/40 group flex flex-col relative ${p.stock === 'sin-stock' ? 'opacity-70' : ''}">
+        ${stockBadge(p.stock)}
+        <div class="${cfg.bg} aspect-square p-4 flex items-center justify-center relative overflow-hidden">${img}</div>
+        <div class="p-3 sm:p-4 flex flex-col flex-1">
+            <p class="font-label text-[11px] text-outline mb-1 uppercase tracking-wide truncate">${esc(p.categoria)}</p>
+            <h3 class="text-sm font-semibold text-on-surface leading-snug flex-1 line-clamp-2">${esc(p.nombre)}</h3>
+            ${sub ? `<p class="text-xs text-outline mt-1 leading-relaxed line-clamp-1">${esc(sub)}</p>` : ''}
+            <div class="flex items-center gap-1.5 mt-2.5">
+                <span class="material-symbols-outlined text-outline-variant" style="font-size:15px">${esGenerico ? 'sell' : 'verified'}</span>
+                <span class="font-label text-xs ${esGenerico ? 'italic text-outline' : 'text-on-surface-variant font-medium'} truncate">${esc(marca)}</span>
+            </div>
+            <div class="flex justify-between items-end mt-2 pt-2.5 border-t border-outline-variant/30">
+                <span class="leading-none">
+                    <span class="font-headline text-lg sm:text-xl font-extrabold text-primary">${fmtPrice(p.precio)}</span>
+                    ${p.medida ? `<span class="font-label text-[11px] text-outline ml-1">/ ${esc(p.medida)}</span>` : ''}
+                </span>
+                <span class="font-label text-[11px] text-outline-variant">${esc(p.sku)}</span>
+            </div>
+        </div>
+    </article>`;
+}
 
-    document.getElementById('footer-count').textContent = PRODUCTOS.length;
+// ─── Render principal ────────────────────────────────────────────────────────
+function render() {
+    const fp = filteredProducts();
+    const sp = sectionProducts();
+    const grid = document.getElementById('product-grid');
+
+    // Sincroniza estados activos de chips y links
+    document.querySelectorAll('[data-cat]').forEach(el => el.classList.toggle('active', el.dataset.cat === activeCategory));
+    document.querySelectorAll('[data-chip]').forEach(el => el.classList.toggle('active', el.dataset.chip === activeCategory));
+
+    const badge = document.getElementById('filter-badge');
+    const n = activeFilterCount();
+    badge.textContent = n;
+    badge.classList.toggle('hidden', n === 0);
 
     if (fp.length === 0) {
         grid.innerHTML = '';
-        grid.classList.add('hidden');
-        empty.classList.remove('hidden');
-        empty.classList.add('flex');
+        showView('empty');
         document.getElementById('results-count').textContent = '';
     } else {
-        empty.classList.add('hidden');
-        empty.classList.remove('flex');
-        grid.classList.remove('hidden');
         grid.innerHTML = fp.map(renderCard).join('');
+        showView('grid');
         document.getElementById('results-count').textContent =
-            fp.length < sp.length
-                ? `Mostrando ${fp.length} de ${sp.length} productos`
-                : `${fp.length} producto${fp.length !== 1 ? 's' : ''}`;
+            (fp.length < sp.length) ? `Mostrando ${fp.length} de ${sp.length}` : `${fp.length} producto${fp.length !== 1 ? 's' : ''}`;
     }
 }
 
-// ─── Atajos de teclado ────────────────────────────────────────────────────────
+// ─── Drawer (móvil) ──────────────────────────────────────────────────────────
+function openDrawer() {
+    const d = document.getElementById('filter-drawer'), b = document.getElementById('filter-backdrop');
+    b.classList.remove('hidden');
+    requestAnimationFrame(() => { b.classList.remove('opacity-0'); d.classList.remove('translate-x-full'); });
+    document.body.style.overflow = 'hidden';
+}
+function closeDrawer() {
+    const d = document.getElementById('filter-drawer'), b = document.getElementById('filter-backdrop');
+    d.classList.add('translate-x-full'); b.classList.add('opacity-0');
+    setTimeout(() => b.classList.add('hidden'), 300);
+    document.body.style.overflow = '';
+}
+
+// ─── Atajos de teclado ───────────────────────────────────────────────────────
 document.addEventListener('keydown', e => {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-        e.preventDefault();
-        document.getElementById('search-input').focus();
-    }
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); document.getElementById('search-input').focus(); }
+    if (e.key === 'Escape') { closeDrawer(); if (searchQuery) clearSearch(); }
 });
 
-// ─── Arranque ─────────────────────────────────────────────────────────────────
-buildSidebar();
-render();
+// ─── Arranque ────────────────────────────────────────────────────────────────
+document.getElementById('year').textContent = new Date().getFullYear();
+(function init() {
+    const cache = loadCache();
+    if (cache) { PRODUCTOS = cache.data; afterDataChange(); setSyncStatus('offline', cache.t); }
+    else { showView('loading'); }
+    syncProducts();                 // siempre busca la versión más reciente
+})();
 </script>
 </body>
 </html>

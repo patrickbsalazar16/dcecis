@@ -1,0 +1,20 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="D'Cecis">
+  <defs>
+    <linearGradient id="dc-grad" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9a6470"/>
+      <stop offset="1" stop-color="#81515b"/>
+    </linearGradient>
+  </defs>
+  <!-- Badge -->
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#dc-grad)"/>
+  <!-- Open book -->
+  <path d="M14 22c5-2.6 9.6-2.6 14 0v22c-4.4-2.6-9-2.6-14 0V22Z" fill="#ffffff" fill-opacity="0.96"/>
+  <path d="M50 22c-5-2.6-9.6-2.6-14 0v22c4.4-2.6 9-2.6 14 0V22Z" fill="#ffd9df"/>
+  <path d="M32 20v25" stroke="#81515b" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- Page lines -->
+  <path d="M18 27c2.6-1 5-1 7 0M18 32c2.6-1 5-1 7 0" stroke="#f3b7c1" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- Pencil bookmark -->
+  <path d="M40 12l4 2-9 16-4-2 9-16Z" fill="#f3b7c1"/>
+  <path d="M40 12l4 2 1.6-2.8a1.4 1.4 0 0 0-.6-1.9l-1.5-.8a1.4 1.4 0 0 0-1.9.6L40 12Z" fill="#456554"/>
+  <path d="M31 28l4 2-.4 3.6L31 28Z" fill="#34647b"/>
+</svg>
